@@ -496,7 +496,7 @@ html {
     }
 }
 
-// --------------------------------------
+// ------------------------- SECTION 4 - SERVICES ---------------------
 #services {
     // height: 100vh;
     margin-left: 300px;
@@ -589,4 +589,137 @@ html {
         }
 
     }
+}
+
+// ------------------- SECTION 5 - PORTFOLIO ----------------
+#portfolio {
+    // height: 100vh;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    // border: 1px solid red;
+    padding-top: 80px;
+
+    .container {
+        width: 95%;
+        // height: 100vh;
+        margin-left: 30px;
+        // border: 1px solid green;
+
+        .title {
+            border-left: 6px solid #E3872D;
+            padding-left: 15px;
+            margin-bottom: 40px;
+
+            // border: 1px solid red;
+            h1 {
+                font-size: 40px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+            }
+
+            h3 {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .center {
+            border: 1px solid red;
+
+            .portfolioNavigation {
+                display: inline-block;
+
+                ul {
+                    list-style: none;
+                    display: flex;
+                    // margin-right: 15px;
+
+                    li {
+                        margin-right: 25px;
+
+                        a {
+                            font-size: 15px;
+                            font-weight: 700;
+                            line-height: 1.8;
+                            letter-spacing: 0.5px;
+                            color: #000000;
+                            font-family: 'Montserrat', sans-serif;
+                            text-decoration: none;
+
+                        }
+                    }
+                }
+            }
+
+            .bigBox {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .box {
+                    width: 32%;
+                    height: 100px;
+                    border: 1px solid purple;
+
+                    a {
+                        width: 100%;
+
+                        .image {
+                            width: 100%;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+// -------------- BUTTON SCROLL TO THE TOP -----------------
+#myBtn {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Fixed/sticky position */
+    bottom: 30px;
+    /* Place the button at the bottom of the page */
+    right: 30px;
+    /* Place the button 30px from the right */
+    z-index: 99;
+    /* Make sure it does not overlap */
+    border: none;
+    /* Remove borders */
+    outline: none;
+    /* Remove outline */
+    background-color: #E3872D;
+    /* Set a background color */
+    color: white;
+    /* Text color */
+    cursor: pointer;
+    /* Add a mouse pointer on hover */
+    padding: 15px;
+    /* Some padding */
+    border-radius: 10px;
+    /* Rounded corners */
+    font-size: 18px;
+    /* Increase font size */
+}
+
+#myBtn:hover {
+    background-color: #041230;
+    /* Add a dark-grey background on hover */
 }
