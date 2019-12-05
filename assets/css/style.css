@@ -983,10 +983,6 @@ html {
   padding-bottom: 0;
 }
 
-#portfolio .container .center {
-  border: 1px solid red;
-}
-
 #portfolio .container .center .portfolioNavigation {
   display: inline-block;
 }
@@ -1014,6 +1010,112 @@ html {
 
 #portfolio .container .center .bigBox {
   width: 100%;
+  height: 105vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+#portfolio .container .center .bigBox .box {
+  width: 32%;
+  height: 48%;
+  margin: 10px 0;
+}
+
+#portfolio .container .center .bigBox .box a {
+  width: 100%;
+}
+
+#portfolio .container .center .bigBox .box a img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#testimonials {
+  height: 75vh;
+  margin-left: 300px;
+  margin-bottom: 30px;
+  background-image: url(../img/testimonials.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#testimonials .container {
+  width: 100%;
+  height: 100%;
+  padding: 80px 200px;
+  background-color: #041230c0;
+}
+
+#testimonials .container .owl-carousel {
+  width: 100%;
+}
+
+#testimonials .container .owl-carousel .quotes {
+  padding: 60px 0 80px 0;
+}
+
+#testimonials .container .owl-carousel .quotes .icon {
+  font-size: 32px;
+  color: #E3872D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 10px;
+}
+
+#testimonials .container .owl-carousel .quotes .text {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  line-height: 1.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#testimonials .container .owl-carousel .quotes .author {
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  line-height: 1.4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#numbers {
+  height: 17vh;
+  margin-left: 300px;
+  margin-bottom: 100px;
+}
+
+#numbers .container {
+  width: 95%;
+  padding: 0 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1024,18 +1126,177 @@ html {
           justify-content: space-between;
 }
 
-#portfolio .container .center .bigBox .box {
+#numbers .container .number {
+  border-right: 0.5px solid #ccc8c8;
+  height: 180px;
+  padding-right: 40px;
+  padding-top: 40px;
+}
+
+#numbers .container .number h3 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+#numbers .container .number p {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #757575;
+  font-family: 'Montserrat', sans-serif;
+  margin: auto;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+#numbers .container .number:last-child {
+  border-right: none;
+}
+
+#news {
+  margin-left: 300px;
+  margin-bottom: 100px;
+  padding-top: 80px;
+  background-color: #F6F7FD;
+}
+
+#news .container {
+  width: 95%;
+  height: 80vh;
+  margin-left: 30px;
+}
+
+#news .container .title {
+  border-left: 6px solid #E3872D;
+  padding-left: 15px;
+  margin-bottom: 100px;
+}
+
+#news .container .title h1 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#news .container .title h3 {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#news .container .center {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#news .container .center .box {
   width: 32%;
-  height: 100px;
-  border: 1px solid purple;
+  height: 500px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#portfolio .container .center .bigBox .box a {
-  width: 100%;
+#news .container .center .box .image {
+  height: 40%;
+  width: auto;
+  margin-bottom: 7px;
 }
 
-#portfolio .container .center .bigBox .box a .image {
-  width: 100%;
+#news .container .center .box .image img {
+  height: 100%;
+  max-width: 100%;
+}
+
+#news .container .center .box .mainInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#news .container .center .box .mainInfo .date {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#news .container .center .box .mainInfo .link a {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+  text-decoration: none;
+}
+
+#news .container .center .box .new {
+  height: 60%;
+}
+
+#news .container .center .box .new ul {
+  list-style: none;
+  padding: 0 15px;
+}
+
+#news .container .center .box .new ul li {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+#news .container .center .box .new ul li a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #E3872D;
+  font-weight: 600;
+  font-family: "Montserrat";
+  padding: 12px 35px;
+  border-radius: 3px;
+  display: inline-block;
+  overflow: hidden;
 }
 
 #myBtn {

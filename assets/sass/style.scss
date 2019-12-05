@@ -550,7 +550,6 @@ html {
             .box {
                 height: 300px;
                 width: 300px;
-                // border: 1px solid blue;
                 padding: 20px;
                 margin-bottom: 20px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -635,7 +634,7 @@ html {
         }
 
         .center {
-            border: 1px solid red;
+            // border: 1px solid red;
 
             .portfolioNavigation {
                 display: inline-block;
@@ -664,28 +663,315 @@ html {
 
             .bigBox {
                 width: 100%;
+                height: 105vh;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                align-items: center;
+                padding: 10px;
 
                 .box {
                     width: 32%;
-                    height: 100px;
-                    border: 1px solid purple;
+                    height: 48%;
+                    // border: 1px solid purple;
+                    // padding: 10px 0;
+                    margin: 10px 0;
 
                     a {
                         width: 100%;
 
-                        .image {
-                            width: 100%;
+                        img {
+                            // display: block;
+                            // margin: 0 auto;
+                            max-width: 100%;
+                            object-fit: contain;
+                            // max-width: 100%;
+                            // max-height: 100%;
+                            // width: auto;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+// ----------------------- SECTION - QUOTE ------------------------
+
+#testimonials {
+    height: 75vh;
+    margin-left: 300px;
+    margin-bottom: 30px;
+    // border: 1px solid red;
+    // padding-top: 80px;
+    background-image: url(../img/testimonials.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 80px 200px;
+        // border: 1px solid green;
+        background-color: #041230c0;
+
+        .owl-carousel {
+            width: 100%;
+
+            .quotes {
+                // border: 1px solid purple;
+                padding: 60px 0 80px 0;
+                // display: flex;
+                // justify-content: center;
+                // align-items: center;
+
+                .icon {
+                    font-size: 32px;
+                    color: #E3872D;
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                    // align-items: center;
+                }
+
+                .text {
+                    color: #fff;
+                    font-size: 20px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                    line-height: 1.4;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                .author {
+                    color: #fff;
+                    font-size: 15px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 100;
+                    line-height: 1.4;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+// ----------------------- SECTION - NUMBERS ------------------------
+#numbers {
+    height: 17vh;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    // border: 1px solid red;
+    // padding-top: 80px;
+
+    .container {
+        width: 95%;
+        // height: 100vh;
+        // margin-left: 30px;
+        padding: 0 80px;
+        // border: 1px solid green;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .number {
+            border-right: 0.5px solid #ccc8c8;
+            height: 180px;
+            padding-right: 40px;
+            padding-top: 40px;
+
+
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+                text-align: center;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #757575;
+                font-family: 'Montserrat', sans-serif;
+                margin: auto;
+                padding-bottom: 0;
+                text-align: center;
+            }
+        }
+
+        .number:last-child {
+            border-right: none;
+        }
+
+    }
+}
+
+// ---------------------------- SECTION - NEWS -----------------------
+#news {
+    // height: 100vh;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    padding-top: 80px;
+    background-color: #F6F7FD;
+
+    .container {
+        width: 95%;
+        height: 80vh;
+        margin-left: 30px;
+        // border: 1px solid green;
+
+        .title {
+            border-left: 6px solid #E3872D;
+            padding-left: 15px;
+            margin-bottom: 100px;
+
+            h1 {
+                font-size: 40px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+            }
+
+            h3 {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .center {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .box {
+                width: 32%;
+                height: 500px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+                .image {
+                    height: 40%;
+                    width: auto;
+                    margin-bottom: 7px;
+
+                    img {
+                        height: 100%;
+                        max-width: 100%;
+                    }
+                }
+
+                .mainInfo {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .date {
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 1.8;
+                        letter-spacing: 0.5px;
+                        color: #000000;
+                        font-family: 'Montserrat', sans-serif;
+                        margin: 0;
+                        padding-bottom: 0;
+
+                    }
+
+                    .link {
+
+                        a {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1.8;
+                            letter-spacing: 0.5px;
+                            color: #000000;
+                            font-family: 'Montserrat', sans-serif;
+                            margin: 0;
+                            padding-bottom: 0;
+                            text-decoration: none;
+                        }
+
+                    }
+                }
+
+                .new {
+                    height: 60%;
+
+                    ul {
+                        list-style: none;
+                        padding: 0 15px;
+
+                        li {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1.8;
+                            letter-spacing: 0.5px;
+                            color: #000000;
+                            font-family: 'Montserrat', sans-serif;
+                            margin: 0;
+                            padding-bottom: 10px;
+
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                                background-color: #E3872D;
+                                font-weight: 600;
+                                font-family: "Montserrat";
+                                padding: 12px 35px;
+                                border-radius: 3px;
+                                display: inline-block;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+
+                }
+
+
 
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

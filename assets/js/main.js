@@ -1,4 +1,4 @@
-// ------------ MAIN PAGE - TEXT-TYPING ------------
+// -------------------- MAIN PAGE - TEXT-TYPING ---------------------
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -56,8 +56,7 @@ window.onload = function () {
     document.body.appendChild(css);
 };
 
-// BUTTON SCROLL TO TE TOP
-//Get the button:
+// ----------------- BUTTON SCROLL TO THE TOP ----------------------
 mybutton = document.getElementById("myBtn");
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -70,18 +69,18 @@ function scrollFunction() {
         mybutton.style.display = "none";
     }
 }
-
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-
-
-// ---------------------------------------------------
-// -------- MAGIC STARS BACKGROUND EFFECT ------------
-// /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-// particlesJS.load('particles-js', 'assets/particles.json', function () {
-//     console.log('callback - particles.js config loaded');
-// });
-  // -------------------------------------------------
+// -------------------------------- TESTIMONIALS ---------------------------------------
+$(document).ready(function () {
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        lazyLoad: true,
+        loop: true,
+        margin: 10
+    });
+});
+// -------------------------------------------------------------------------------------
