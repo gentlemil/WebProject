@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="http://www.jsdelivr.com/#!particles.js">
     <!-- <link rel="stylesheet" href="assets/css/grid.css"> -->
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="/assets/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.css">
 
@@ -343,25 +343,35 @@
     <section id="numbers">
         <div class="container">
             <div class="number">
-                <h3>2,222</h3>
+                <div class="fuse">
+                    <h3>2222</h3>
+                </div>
                 <p>Projects Completed</p>
             </div>
             <div class="number">
-                <h3>333K</h3>
+                <div class="fuse">
+                    <h3>333</h3>
+                    <p>K</p>
+                </div>
                 <p>Lines of Code</p>
             </div>
             <div class="number">
-                <h3>8,888</h3>
+                <div class="fuse">
+                    <h3>8888</h3>
+                </div>
                 <p>Happy Clients</p>
             </div>
             <div class="number">
-                <h3>777+</h3>
+                <div class="fuse">
+                    <h3>777</h3>
+                    <p>+</p>
+                </div>
                 <p>My Awwwards</p>
             </div>
         </div>
     </section>
 
-    <!-- ------------------------------ SECTION - NUMBERS ------------------------------ -->
+    <!-- ------------------------------ SECTION - NEWS ------------------------------ -->
     <section id="news">
         <div class="container">
             <div class="title">
@@ -369,7 +379,7 @@
                 <h3>Check out our latest News</h3>
             </div>
             <div class="center">
-                <div class="box">
+                <div data-aos="fade-up" class="box">
                     <div class="image"><img src="assets/img/new1.jpg" alt=""></div>
                     <div class="mainInfo">
                         <div class="date">January 22,2018 &nbsp &#x2014 &nbsp</div>
@@ -385,7 +395,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="box">
+                <div data-aos="fade-up" data-aos-delay="150" class="box">
                     <div class="image"><img src="assets/img/new2.jpg" alt=""></div>
                     <div class="mainInfo">
                         <div class="date">April 12, 2018 &nbsp &#x2014 &nbsp</div>
@@ -401,7 +411,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="box">
+                <div data-aos="fade-up" data-aos-delay="300" class="box">
                     <div class="image"><img src="assets/img/new3.jpg" alt=""></div>
                     <div class="mainInfo">
                         <div class="date">January 22, 2018 &nbsp &#x2014 &nbsp</div>
@@ -421,13 +431,56 @@
         </div>
     </section>
 
+    <!-- ------------ LAST SECTION - CONTACT ------------- -->
 
+    <section id="contact">
+        <div class="container">
+            <div class="title">
+                <h1>CONTACT ME</h1>
+                <h3>Get in touch with me</h3>
+            </div>
+            <div class="center">
+                <div class="leftSide">
+                    <div class="header">Get in Touch</div>
+                    <div class="row">
+                        <div class="column">
+                            <div><b>Address:</b></div>
+                            <div><b>Email:</b></div>
+                            <div><b>Phone:</b></div>
+                            <div><b>Website:</b></div>
+                        </div>
+                        <div class="column">
+                            <div>123 Qwerty Avenue NYC, USA</div>
+                            <div>example@gmail.com</div>
+                            <div>+77 022 177 05 05</div>
+                            <div>www.yourdomain.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightSide">
+                    <!-- FORM -->
+                    <form action="" method="get">
+                        <div class="row">
+                            <input type="text" id="type-name" required name="name" placeholder="Your name">
+                        </div>
+                        <div class="row">
+                            <input type="email" id="type-email" required name="email" placeholder="Your email">
+                        </div>
+                        <div class="row">
+                            <textarea name="message" id="type-message" placeholder="Your message"></textarea>
+                        </div>
+                        <div class="row">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-
-
-
-
-
+    <section id="footer">
+        <p>© Copyright 2019. All Rights are Reserved.</p>
+    </section>
 
     <!-- ------------------------------------------------------ -->
     <!-- ------------- BOTTON SCROLL TO THE TOP --------------- -->
