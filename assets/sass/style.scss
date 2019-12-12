@@ -114,41 +114,46 @@ html {
         }
     }
 
-    .button {
-        height: 26px;
-        width: 26px;
-        background-color: $mainButtonColor;
-        cursor: pointer;
+    button {
+        border: 2px solid red;
+        width: 20px;
+        height: 20px;
 
-        // justify-content: center;
-        // right: 0;
-        align-items: flex-end;
-        border-radius: 2px;
+        .hideMenu {
+            height: 26px;
+            width: 26px;
+            background-color: $mainButtonColor;
+            // cursor: pointer;
+            border-radius: 2px;
+            transform: translate(265.5px, -120px);
 
-        .wrapper {
-            position: relative;
+            .wrapper {
+                position: relative;
+                width: 20px;
+                // color: white;
 
-            div {
-                height: 1.5px;
-                background-color: black;
-                width: 40%;
-                border-radius: 2px;
-                position: absolute;
+                .icon {
+                    color: white;
+                }
+
+
             }
 
-            div:nth-child(1) {
-                transform: rotate(45deg);
-                top: 15px;
-                left: 2px;
-            }
-
-            div:nth-child(2) {
-                transform: rotate(-45deg);
-                bottom: 16px;
-                left: 2px;
-            }
         }
     }
+
+    .active {
+        transform: translateX(30px);
+        position: relative;
+        z-index: 100;
+    }
+
+}
+
+.main {
+    transform: translateX(-300px);
+    z-index: 100;
+
 }
 
 // ------------------------- MAIN PAGE ------------------------
@@ -160,6 +165,7 @@ html {
     // border: 1px solid red;
     background-image: url(../img/background-image.jpg);
     background-size: cover;
+    position: relative;
 
     .container {
         background-color: #04123085;
@@ -231,6 +237,17 @@ html {
         }
     }
 }
+
+.active {
+    // transform: translateX(-300px);
+    width: 100%;
+    z-index: -1;
+    margin-left: 0;
+    max-width: 100vw;
+    position: relative;
+}
+
+
 
 // ---------------------- SECTION 2 - ABOUT -------------------------
 // Poprawic napis (rightPart)
@@ -412,12 +429,21 @@ html {
                                 position: relative;
                                 overflow: hidden;
                             }
+
+                            a:hover {
+                                background-color: $mainBackgroundColor;
+                            }
                         }
                     }
                 }
             }
         }
     }
+}
+
+.active {
+    transform: translateX(-300px);
+    width: 100%;
 }
 
 // ----------------------- SECTION 3 - ABILITIES ---------------------
@@ -494,6 +520,11 @@ html {
             }
         }
     }
+}
+
+.active {
+    transform: translateX(-300px);
+    width: 100%;
 }
 
 // ------------------------- SECTION 4 - SERVICES ---------------------
@@ -589,6 +620,12 @@ html {
 
     }
 }
+
+.active {
+    transform: translateX(-300px);
+    width: 100%;
+}
+
 
 // ------------------- SECTION 5 - PORTFOLIO ----------------
 #portfolio {
@@ -696,6 +733,11 @@ html {
     }
 }
 
+.active {
+    transform: translateX(-300px);
+    width: 100%;
+}
+
 // ----------------------- SECTION - QUOTE ------------------------
 
 #testimonials {
@@ -760,6 +802,11 @@ html {
     }
 }
 
+.active {
+    transform: translateX(-300px);
+    width: 100%;
+}
+
 // ----------------------- SECTION - NUMBERS ------------------------
 #numbers {
     height: 17vh;
@@ -813,11 +860,6 @@ html {
                 }
             }
 
-
-
-
-
-
             p {
                 font-size: 14px;
                 font-weight: 700;
@@ -834,15 +876,19 @@ html {
         .number:last-child {
             border-right: none;
         }
-
     }
+}
+
+.active {
+    transform: translateX(-300px);
+    width: 100%;
 }
 
 // ---------------------------- SECTION - NEWS -----------------------
 #news {
     height: 900px;
     margin-left: 300px;
-    margin-bottom: 100px;
+    // margin-bottom: 100px;
     padding-top: 80px;
     background-color: #F6F7FD;
 
@@ -968,14 +1014,15 @@ html {
                             }
                         }
                     }
-
                 }
-
-
-
             }
         }
     }
+}
+
+.active {
+    transform: translateX(-300px);
+    width: 100%;
 }
 
 // --------------------- LAST SECTION - CONTACT -----------------------
@@ -983,7 +1030,7 @@ html {
 #contact {
     height: 100vh;
     margin-left: 300px;
-    margin-bottom: 100px;
+    margin-bottom: 130px;
     padding-top: 80px;
     // background-color: #F6F7FD;
 
@@ -1125,12 +1172,19 @@ html {
     }
 }
 
+.active {
+    transform: translateX(-300px);
+    width: 100%;
+}
+
 // --------------------- FOOTER ----------------------------
-#footer {
+footer {
     height: 150px;
     background-color: $mainBackgroundColor;
     margin-left: 300px;
     margin-bottom: 0;
+    margin-top: 0;
+    overflow-x: hidden;
 
     p {
         font-size: 14px;
@@ -1144,18 +1198,10 @@ html {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
+.active {
+    transform: translateX(-300px);
+    width: 100%;
+}
 
 // -------------- BUTTON SCROLL TO THE TOP -----------------
 #myBtn {
@@ -1190,4 +1236,9 @@ html {
 #myBtn:hover {
     background-color: #041230;
     /* Add a dark-grey background on hover */
+}
+
+.active {
+    transform: translateX(-300px);
+    width: 100%;
 }

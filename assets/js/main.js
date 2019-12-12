@@ -1,3 +1,24 @@
+// -------------------- SHOW-HIDE MENU -------------------
+
+$(document).ready(function () {
+    $("button").click(function () {
+        $("#navigation").toggleClass("main");
+        $("button").toggleClass("active");
+        $("#main-page").toggleClass("active");
+        $("#about").toggleClass("active");
+        $("#abilities").toggleClass("active");
+        $("#services").toggleClass("active");
+        $("#portfolio").toggleClass("active");
+        $("#testimonials").toggleClass("active");
+        $("#numbers").toggleClass("active");
+        $("#news").toggleClass("active");
+        $("#contact").toggleClass("active");
+        $("footer").toggleClass("active");
+        $("#myBtn").toggleClass("active");
+    });
+});
+
+
 // -------------------- MAIN PAGE - TEXT-TYPING ---------------------
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
