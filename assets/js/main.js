@@ -3,18 +3,17 @@
 $(document).ready(function () {
     $("button").click(function () {
         $("#navigation").toggleClass("main");
-        $("button").toggleClass("active");
+        $("button.button").toggleClass("active");
         $("#main-page").toggleClass("active");
-        $("#about").toggleClass("active");
-        $("#abilities").toggleClass("active");
-        $("#services").toggleClass("active");
-        $("#portfolio").toggleClass("active");
-        $("#testimonials").toggleClass("active");
-        $("#numbers").toggleClass("active");
-        $("#news").toggleClass("active");
-        $("#contact").toggleClass("active");
-        $("footer").toggleClass("active");
-        $("#myBtn").toggleClass("active");
+        $("#about").toggleClass("active-about");
+        $("#abilities").toggleClass("active-abilities");
+        $("#services").toggleClass("active-services");
+        $("#portfolio").toggleClass("active-portfolio");
+        $("#testimonials").toggleClass("active-testimonials");
+        $("#numbers").toggleClass("active-numbers");
+        $("#news").toggleClass("active-news");
+        $("#contact").toggleClass("active-contact");
+        $("footer").toggleClass("active-footer");
     });
 });
 
