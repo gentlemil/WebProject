@@ -1,0 +1,294 @@
+// -------------------------------------------------------------------
+// ---------------------- SECTION 2 - ABOUT --------------------------
+// -------------------------------------------------------------------
+// Poprawic napis (rightPart)
+// Zrobic hover na obrazku i przy przyciskach
+// Wyrownac liste do lewej strony (CHOLERA JAK?)
+
+#about {
+    height: 100vh;
+    margin-left: 300px;
+    margin-bottom: 100px;
+    padding-top: 80px;
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        margin-left: 30px;
+
+        .title {
+            border-left: 6px solid #E3872D;
+            padding-left: 15px;
+            margin-bottom: 40px;
+
+            h1 {
+                font-size: 40px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+            }
+
+            h2 {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .center {
+            width: 95%;
+            display: flex;
+            justify-content: center;
+            // align-items: center;
+            // margin: 30px;
+            // border: 3px solid red;
+
+
+            .leftPart {
+                width: 45%;
+                // border: 1px solid green;
+                position: relative;
+
+
+                .background {
+                    width: 350px;
+                    height: 380px;
+                    border: 10px solid #041230;
+                    position: absolute;
+                    z-index: 1;
+                    transform: translate(25px, 30px);
+                }
+
+                .photo {
+                    width: 350px;
+                    // height: 365px;
+                    position: absolute;
+                    z-index: 2;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .rightPart {
+                width: 55%;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 13px;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                word-wrap: break-word;
+                font-weight: 400;
+                margin: 0 20px;
+
+                .start {
+                    display: flex;
+                    justify-content: start;
+
+                    h3 {}
+
+                    h3 {
+                        .typewrite {
+                            font-size: 20px;
+                            font-weight: 300;
+                            line-height: 1.8;
+                            letter-spacing: 0.5px;
+                            color: $mainFontColor;
+                            font-family: 'Montserrat', sans-serif;
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+
+                    span {}
+                }
+
+                .list {
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0;
+                    padding: 0;
+
+                    .firstCol {
+                        display: block;
+                        margin-inline-start: 0px;
+                        margin-inline-end: 0px;
+                        padding-inline-start: 0px;
+
+                        ul {
+                            list-style: none;
+                            padding-left: 0;
+                            margin-left: o;
+
+                            li {}
+                        }
+                    }
+
+                    .secondCol {
+                        ul {
+                            list-style: none;
+
+                            li {}
+                        }
+                    }
+
+                    .thirdCol {
+                        ul {
+                            list-style: none;
+
+                            li {}
+                        }
+                    }
+
+                    .fourthCol {
+                        ul {
+                            list-style: none;
+
+                            li {}
+                        }
+                    }
+                }
+
+                .buttomsAbout {
+                    display: flex;
+                    justify-content: left;
+                    // margin: 0 auto;
+                    padding: 0;
+
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        justify-content: center;
+                        margin: 0;
+
+
+                        li {
+                            padding-right: 20px;
+
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                                background-color: #E3872D;
+                                font-weight: 600;
+                                font-family: "Montserrat";
+                                padding: 12px 35px;
+                                border-radius: 3px;
+                                display: inline-block;
+                                position: relative;
+                                overflow: hidden;
+                            }
+
+                            a:hover {
+                                background-color: $mainBackgroundColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active-about {
+    transform: translateX(-300px);
+    width: 100%;
+    padding: 0 80px;
+}
+
+// -------- RESPONSIVE FOR 768px - 1500px (XIAOMI REDMI 7) -------
+// ---------------------------------------------------------------
+@media screen and (max-width: 768px) {
+    #about {
+        margin: 10px 15px;
+        max-width: 100vw;
+        width: 100%;
+        padding-top: 20px;
+        margin: 10px;
+        overflow-x: hidden;
+
+        .container {
+            padding-top: 0;
+
+
+            .center {
+                display: block;
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                justify-content: flex-start;
+
+                .leftPart {
+                    display: none;
+                }
+
+                .rightPart {
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    width: 90vw;
+
+                    .list {
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        .firstCol {
+                            ul {
+                                margin: 10px 40px 10px 10px;
+                                padding: 0;
+
+                                li {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        .secondCol {
+                            ul {
+                                margin: 10px 40px 10px 30px;
+                                padding: 0;
+
+                                li {}
+                            }
+                        }
+
+                        .thirdCol {
+                            ul {
+                                margin: 10px 30px 10px 10px;
+                                padding: 0;
+
+                                li {}
+                            }
+                        }
+
+                        .fourthCol {
+                            ul {
+                                margin: 10px 30px;
+                                padding: 0;
+
+                                li {}
+                            }
+                        }
+                    }
+
+                    .buttomsAbout {
+                        ul {
+                            margin: 20px 0 0 0;
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

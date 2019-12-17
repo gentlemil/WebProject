@@ -7,6 +7,7 @@ $(document).ready(function () {
         $("#main-page").toggleClass("active");
         $("#about").toggleClass("active-about");
         $("#abilities").toggleClass("active-abilities");
+        $(".leftPart").toggleClass("activeLeftPart");
         $("#services").toggleClass("active-services");
         $("#portfolio").toggleClass("active-portfolio");
         $("#testimonials").toggleClass("active-testimonials");
@@ -14,11 +15,34 @@ $(document).ready(function () {
         $("#news").toggleClass("active-news");
         $("#contact").toggleClass("active-contact");
         $("footer").toggleClass("active-footer");
+
     });
 });
 
+// ------------------------------------------------------------------
+// ----------------- NAVIGATION - SMARTPHONE ------------------------
+// ------------------------------------------------------------------
+$(document).ready(function () {
+    $(".cross").hide();
+    $(".menuNew").hide();
+    $(".hamburger").click(function () {
+        $(".menu").slideToggle("slow", function () {
+            $(".hamburger").hide();
+            $(".cross").show();
+        });
+    });
 
+    $(".cross").click(function () {
+        $(".menuNew").slideToggle("slow", function () {
+            $(".cross").hide();
+            $(".hamburger").show();
+        });
+    });
+});
+
+// ------------------------------------------------------------------
 // -------------------- MAIN PAGE - TEXT-TYPING ---------------------
+// ------------------------------------------------------------------
 var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
@@ -116,6 +140,20 @@ $('#numbers .container .number .fuse h3').each(function () {
         }
     });
 });
+// -------------------- ROLLING (ABILITIES) ----------------------
+// sliding = document.getElementsByClassName("#abilities .container .rightPart .line .lineInside .active");
+
+// // When the user scrolls down 20px from the top of the document, show the button
+// window.onscroll = function () { scrollFunction() };
+
+// function scrollFunction() {
+//     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//         sliding.style.display = "block";
+//     } else {
+//         sliding.style.display = "none";
+//     }
+
+
 // --------------------------------------
 AOS.init();
 // --------------------------------------

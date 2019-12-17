@@ -1,0 +1,206 @@
+// -------------------------------------------------------------------
+// ---------------------------- SECTION - NEWS -----------------------
+// -------------------------------------------------------------------
+#news {
+    height: 900px;
+    margin-left: 300px;
+    // margin-bottom: 100px;
+    padding-top: 80px;
+    background-color: #F6F7FD;
+
+    .container {
+        width: 95%;
+        height: 80vh;
+        margin-left: 30px;
+        // border: 1px solid green;
+
+        .title {
+            border-left: 6px solid #E3872D;
+            padding-left: 15px;
+            margin-bottom: 100px;
+
+            h1 {
+                font-size: 40px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+            }
+
+            h3 {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                font-family: 'Montserrat', sans-serif;
+                margin: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .center {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .box {
+                width: 32%;
+                height: 500px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+                .image {
+                    height: 40%;
+                    width: auto;
+                    margin-bottom: 7px;
+
+                    img {
+                        height: 100%;
+                        max-width: 100%;
+                    }
+                }
+
+                .mainInfo {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .date {
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 1.8;
+                        letter-spacing: 0.5px;
+                        color: #000000;
+                        font-family: 'Montserrat', sans-serif;
+                        margin: 0;
+                        padding-bottom: 0;
+
+                    }
+
+                    .link {
+
+                        a {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1.8;
+                            letter-spacing: 0.5px;
+                            color: #000000;
+                            font-family: 'Montserrat', sans-serif;
+                            margin: 0;
+                            padding-bottom: 0;
+                            text-decoration: none;
+                        }
+
+                    }
+                }
+
+                .new {
+                    height: 60%;
+
+                    ul {
+                        list-style: none;
+                        padding: 0 15px;
+
+                        li {
+                            font-size: 15px;
+                            font-weight: 300;
+                            line-height: 1.8;
+                            letter-spacing: 0.5px;
+                            color: #000000;
+                            font-family: 'Montserrat', sans-serif;
+                            margin: 0;
+                            padding-bottom: 10px;
+
+                            a {
+                                text-decoration: none;
+                                color: #fff;
+                                background-color: #E3872D;
+                                font-weight: 600;
+                                font-family: "Montserrat";
+                                padding: 12px 35px;
+                                border-radius: 3px;
+                                display: inline-block;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.active-news {
+    transform: translateX(-300px);
+    width: 100%;
+}
+
+// -------- RESPONSIVE FOR 768px - 1500px (XIAOMI REDMI 7) -------
+// ---------------------------------------------------------------
+@media screen and (max-width: 768px) {
+    #news {
+        margin: 10px 15px;
+        max-width: 100vw;
+        width: 100%;
+        padding-top: 20px;
+        margin: 10px;
+        overflow-x: hidden;
+
+        .container {
+
+
+            .title {
+
+
+                h1 {}
+
+                h3 {}
+            }
+
+            .center {
+
+
+                .box {
+                    width: 100%;
+                    height: 100%;
+                    margin: 10px;
+
+                    .image {
+
+
+                        img {}
+                    }
+
+                    .mainInfo {
+
+                        .date {}
+
+                        .link {
+
+                            a {}
+
+                        }
+                    }
+
+                    .new {
+
+                        ul {
+
+                            li {
+
+
+                                a {}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,96 @@
+// -------------------------------------------------------------------
+// --------------------- SECTION - TESTIMONIALS ----------------------
+// -------------------------------------------------------------------
+#testimonials {
+    height: 75vh;
+    margin-left: 300px;
+    margin-bottom: 30px;
+    background-image: url(../img/testimonials.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 80px 200px;
+        background-color: #041230c0;
+
+        .owl-carousel {
+            width: 100%;
+
+            .quotes {
+                // padding: 60px 0 80px 0;
+
+                .icon {
+                    font-size: 32px;
+                    color: #E3872D;
+                    display: flex;
+                    justify-content: center;
+                    padding-bottom: 10px;
+                }
+
+                .text {
+                    color: #fff;
+                    font-size: 20px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 300;
+                    line-height: 1.4;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+
+                .author {
+                    color: #fff;
+                    font-size: 15px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 100;
+                    line-height: 1.4;
+                    display: flex;
+                    justify-content: center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.active-testimonials {
+    transform: translateX(-300px);
+    width: 100%;
+    padding: 0 80px;
+}
+
+@media screen and (max-width: 768px) {
+    #testimonials {
+        height: 75vh;
+        margin: 10px 15px;
+        max-width: 100vw;
+        width: 100%;
+        padding-top: 20px;
+        margin: 10px;
+        overflow-x: hidden;
+
+        .container {
+            padding: 20px;
+            display: flex;
+            align-items: center;
+
+            .owl-carousel {
+                width: 100%;
+
+                .quotes {
+
+
+                    .icon {}
+
+                    .text {}
+
+                    .author {}
+                }
+            }
+        }
+    }
+
+
+}
