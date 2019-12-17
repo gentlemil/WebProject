@@ -599,6 +599,7 @@ template {
   background-image: url(../img/background-image.jpg);
   background-size: cover;
   position: relative;
+  overflow: hidden;
 }
 
 #main-page .container {
@@ -915,9 +916,8 @@ template {
   #about {
     margin: 10px 15px;
     max-width: 100vw;
-    width: 100%;
     padding-top: 20px;
-    margin: 10px;
+    margin: 0 10px 10px 10px;
     overflow-x: hidden;
   }
   #about .container {
@@ -988,6 +988,7 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 80px 0;
 }
 
 #abilities .container {
@@ -997,7 +998,6 @@ template {
   display: -ms-flexbox;
   display: flex;
   background-color: #F6F7FD;
-  padding: 60px 0;
   -ms-flex-line-pack: center;
       align-content: center;
 }
@@ -1024,6 +1024,7 @@ template {
 #abilities .container .leftPart p {
   font-size: 12px;
   font-weight: 300;
+  text-align: justify;
 }
 
 #abilities .container .activeLeftPart {
@@ -1081,10 +1082,9 @@ template {
 
 @media screen and (max-width: 768px) {
   #abilities {
-    margin: 10px 15px;
+    margin: 0 15px;
     height: 100%;
     width: 100%;
-    padding-top: 20px;
     margin: 10px;
     overflow-x: hidden;
   }
@@ -1092,6 +1092,7 @@ template {
     display: block;
     margin: 0;
     padding: 0;
+    padding: 60px 0;
   }
   #abilities .container .leftPart {
     display: block;
@@ -1219,6 +1220,10 @@ template {
     margin: 10px;
     overflow-x: hidden;
   }
+  #services .container {
+    margin: 0;
+    padding: 0 10px;
+  }
   #services .container .center .box {
     width: 100%;
     margin: 10px 5px;
@@ -1319,16 +1324,15 @@ template {
 
 #portfolio .container .center .bigBox .box a {
   position: absolute;
-  background-position: center;
-  max-height: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
 
 #portfolio .container .center .bigBox .box a img {
   max-width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+  max-height: 100%;
 }
 
 .active-portfolio {
@@ -1546,8 +1550,14 @@ template {
     overflow-x: hidden;
     height: 100%;
   }
+  #numbers .container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
   #numbers .container .number {
     width: 50%;
+    height: auto;
     margin: 0;
     padding: 10px;
     -webkit-box-pack: justify;
@@ -1711,13 +1721,13 @@ template {
     margin: 10px 15px;
     max-width: 100vw;
     width: 100%;
+    height: 100%;
     padding-top: 20px;
     margin: 10px;
     overflow-x: hidden;
   }
   #news .container .center .box {
     width: 100%;
-    height: 100%;
     margin: 10px;
   }
 }
@@ -1898,6 +1908,7 @@ html {
   overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-align: justify;
 }
 
 footer {

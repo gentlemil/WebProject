@@ -7,13 +7,13 @@
     margin-left: 300px;
     display: flex;
     align-items: center;
+    padding: 80px 0;
 
     .container {
         height: 50%;
         width: 100%;
         display: flex;
         background-color: #F6F7FD;
-        padding: 60px 0;
         align-content: center;
 
 
@@ -38,6 +38,7 @@
             p {
                 font-size: 12px;
                 font-weight: 300;
+                text-align: justify;
             }
         }
 
@@ -96,11 +97,10 @@
 // ---------------------------------------------------------------
 @media screen and (max-width: 768px) {
     #abilities {
-        margin: 10px 15px;
-        // max-width: 100vw;
+        margin: 0 15px;
         height: 100%;
         width: 100%;
-        padding-top: 20px;
+        // padding: 80px 0;
         margin: 10px;
         overflow-x: hidden;
 
@@ -108,6 +108,7 @@
             display: block;
             margin: 0;
             padding: 0;
+            padding: 60px 0;
 
             .leftPart {
                 display: block;
