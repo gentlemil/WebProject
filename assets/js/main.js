@@ -11,8 +11,6 @@ $(document).ready(function () {
         $("#services").toggleClass("active-services");
         $("#portfolio").toggleClass("active-portfolio");
         $("#testimonials").toggleClass("active-testimonials");
-        // $("#testimonials .container").toggleClass("active-container");
-        // $("#testimonials .owl-carousel").toggleClass("active-owl");
         $("#numbers").toggleClass("active-numbers");
         $("#news").toggleClass("active-news");
         $("#contact").toggleClass("active-contact");
@@ -23,6 +21,25 @@ $(document).ready(function () {
 
 // --------------------- SECTION 1 ----------------------------------
 // ------------------------------------------------------------------
+
+// ----------------- BUTTON SCROLL TO THE TOP -----------------------
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 // ------------------------------------------------------------------
 // ----------------- NAVIGATION - SMARTPHONE ------------------------
@@ -127,55 +144,19 @@ $(".top-tab li").click(function () {
     $(".sub-tab > li").css({ 'display': 'none' });
     $(".sub-tab li[data-menu=" + $(this).data('menu') + "]").css({ 'display': 'block' });
     $(".filter li").hide(200);
-    $(".filter li[data-filter=" + $(this).data('menu') + "]").delay(200).show(200);
+    $(".filter li[data-filter=" + $(this).data('menu') + "]").delay(300).show(300);
     console.log($(".sub-tab li[data-menu='" + $(this).data('menu') + "']"));
 });
 
 $(".sub-tab li").click(function (e) {
     e.stopPropagation();
     $(".filter li").hide(200);
-    $(".filter li[data-filter=" + $(this).data('menu') + "]").delay(200).show(200);
+    $(".filter li[data-filter=" + $(this).data('menu') + "]").delay(300).show(300);
 });
 
-// --------------------- SECTION 7 ----------------------------------
+// -------------- SECTION 7 - TESTIMONIALS --------------------------
 // ------------------------------------------------------------------
 
-// --------------------- SECTION 8 ----------------------------------
-// ------------------------------------------------------------------
-
-// --------------------- SECTION 9 ----------------------------------
-// ------------------------------------------------------------------
-
-// --------------------- SECTION 10 ----------------------------------
-// ------------------------------------------------------------------
-
-// --------------------- SECTION 11 ----------------------------------
-// ------------------------------------------------------------------
-
-
-
-
-
-
-// ----------------- BUTTON SCROLL TO THE TOP ----------------------
-mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
-}
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-// -------------------------------- TESTIMONIALS ---------------------------------------
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         items: 1,
@@ -185,7 +166,10 @@ $(document).ready(function () {
     });
 });
 
-// ------------------------ COUNTING TO THE NUMBER ---------------------------------
+// --------------------- SECTION 8 ----------------------------------
+// ------------------------------------------------------------------
+
+// -------------- COUNTING TO THE NUMBER ----------------------------
 $('#numbers .container .number .fuse h3').each(function () {
     $(this).prop('Counter', 0).animate({
         Counter: $(this).text()
@@ -197,6 +181,17 @@ $('#numbers .container .number .fuse h3').each(function () {
         }
     });
 });
+
+// --------------------- SECTION 9 ----------------------------------
+// ------------------------------------------------------------------
+
+// --------------------- SECTION 10 ----------------------------------
+// ------------------------------------------------------------------
+
+// --------------------- SECTION 11 ----------------------------------
+// ------------------------------------------------------------------
+
+
 // -------------------- ROLLING (ABILITIES) ----------------------
 // sliding = document.getElementsByClassName("#abilities .container .rightPart .line .lineInside .active");
 
@@ -209,7 +204,6 @@ $('#numbers .container .number .fuse h3').each(function () {
 //     } else {
 //         sliding.style.display = "none";
 //     }
-
 
 // --------------------------------------
 AOS.init();
