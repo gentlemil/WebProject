@@ -3,7 +3,7 @@
 // -------------------------------------------------------------------
 
 #abilities {
-    height: 100vh;
+    min-width: 100vh;
     margin-left: 300px;
     display: flex;
     align-items: center;
@@ -90,7 +90,6 @@
 .active-abilities {
     transform: translateX(-300px);
     width: 100%;
-    // padding: 0 80px;
 }
 
 // -------- RESPONSIVE FOR 768px - 1500px (XIAOMI REDMI 7) -------

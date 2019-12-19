@@ -8,18 +8,18 @@
     background-image: url(../img/testimonials.jpeg);
     background-size: cover;
     background-attachment: fixed;
+    background-position: center;
 
     .container {
-        width: 100%;
+        min-width: 100%;
         height: 100%;
         padding: 80px 200px;
         background-color: #041230c0;
 
         .owl-carousel {
-            width: 100%;
+            min-width: 100%;
 
             .quotes {
-                // padding: 60px 0 80px 0;
 
                 .icon {
                     font-size: 32px;
@@ -57,8 +57,8 @@
 
 .active-testimonials {
     transform: translateX(-300px);
+    min-width: 100vw;
     width: 100%;
-    padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {

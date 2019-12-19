@@ -470,8 +470,8 @@ template {
   border: none;
   cursor: pointer;
   border-radius: 2px;
-  -webkit-transform: translate(274px, -120px);
-          transform: translate(274px, -120px);
+  -webkit-transform: translate(274px, -150px);
+          transform: translate(274px, -150px);
   color: white;
   font-size: 10px;
 }
@@ -714,7 +714,6 @@ template {
 }
 
 #about {
-  height: 100vh;
   margin-left: 300px;
   margin-bottom: 100px;
   padding-top: 80px;
@@ -980,7 +979,7 @@ template {
 }
 
 #abilities {
-  height: 100vh;
+  min-width: 100vh;
   margin-left: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1117,7 +1116,7 @@ template {
   margin-left: 300px;
   margin-bottom: 100px;
   padding-top: 80px;
-  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 #services .container {
@@ -1214,7 +1213,7 @@ template {
 
 @media screen and (max-width: 768px) {
   #services {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     padding-top: 20px;
     margin: 10px;
@@ -1237,14 +1236,14 @@ template {
 }
 
 #portfolio .container {
-  width: 95%;
-  margin-left: 30px;
+  width: 100%;
 }
 
 #portfolio .container .title {
   border-left: 6px solid #E3872D;
   padding-left: 15px;
   margin-bottom: 40px;
+  margin-left: 30px;
 }
 
 #portfolio .container .title h1 {
@@ -1269,23 +1268,26 @@ template {
   padding-bottom: 0;
 }
 
-#portfolio .container .center .portfolioNavigation {
-  display: inline-block;
+#portfolio .container .center {
+  min-height: 100vh;
 }
 
-#portfolio .container .center .portfolioNavigation ul {
+#portfolio .container .center ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 100%;
+  background: #fff;
+  margin: 0;
 }
 
-#portfolio .container .center .portfolioNavigation ul li {
-  margin-right: 25px;
-}
-
-#portfolio .container .center .portfolioNavigation ul li a {
-  font-size: 15px;
+#portfolio .container .center ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.8;
   letter-spacing: 0.5px;
@@ -1294,45 +1296,49 @@ template {
   text-decoration: none;
 }
 
-#portfolio .container .center .bigBox {
+#portfolio .container .center .filter {
   width: 100%;
-  height: 105vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
 }
 
-#portfolio .container .center .bigBox .box {
-  display: block;
-  position: relative;
-  background-position: center;
-  background-size: cover;
-  width: 32%;
-  height: 48%;
-  margin: 10px 0;
-  overflow: hidden;
-}
-
-#portfolio .container .center .bigBox .box a {
-  position: absolute;
+#portfolio .container .center .filter ul {
   width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#portfolio .container .center .filter ul li {
+  list-style: none;
+  width: calc(100%/3);
+  height: 100%;
+}
+
+#portfolio .container .center .filter ul li a {
   height: auto;
 }
 
-#portfolio .container .center .bigBox .box a img {
-  max-width: 100%;
+#portfolio .container .center .filter ul li a img {
+  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  max-height: 100%;
 }
 
 .active-portfolio {
@@ -1363,17 +1369,18 @@ template {
   background-image: url(../img/testimonials.jpeg);
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 #testimonials .container {
-  width: 100%;
+  min-width: 100%;
   height: 100%;
   padding: 80px 200px;
   background-color: #041230c0;
 }
 
 #testimonials .container .owl-carousel {
-  width: 100%;
+  min-width: 100%;
 }
 
 #testimonials .container .owl-carousel .quotes .icon {
@@ -1421,8 +1428,8 @@ template {
 .active-testimonials {
   -webkit-transform: translateX(-300px);
           transform: translateX(-300px);
+  min-width: 100vw;
   width: 100%;
-  padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1450,7 +1457,7 @@ template {
 }
 
 #numbers {
-  height: 17vh;
+  height: 25vh;
   margin-left: 300px;
   margin-bottom: 100px;
 }
@@ -1573,15 +1580,14 @@ template {
 }
 
 #news {
-  height: 900px;
   margin-left: 300px;
   padding-top: 80px;
   background-color: #F6F7FD;
+  min-height: 100vh;
 }
 
 #news .container {
   width: 95%;
-  height: 80vh;
   margin-left: 30px;
 }
 
@@ -1615,7 +1621,7 @@ template {
 
 #news .container .center {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1719,12 +1725,9 @@ template {
 @media screen and (max-width: 768px) {
   #news {
     margin: 10px 15px;
-    max-width: 100vw;
     width: 100%;
-    height: 100%;
+    min-height: 100vh;
     padding-top: 20px;
-    margin: 10px;
-    overflow-x: hidden;
   }
   #news .container .center .box {
     width: 100%;
@@ -1733,7 +1736,6 @@ template {
 }
 
 #contact {
-  height: 100vh;
   margin-left: 300px;
   margin-bottom: 130px;
   padding-top: 80px;
@@ -1741,7 +1743,6 @@ template {
 
 #contact .container {
   width: 95%;
-  height: 80vh;
   margin-left: 30px;
 }
 
@@ -1896,12 +1897,90 @@ template {
     margin: 10px;
     overflow-x: hidden;
   }
+  #contact .container .title {
+    margin-bottom: 40px;
+  }
   #contact .container .center .leftSide {
     width: 100%;
+  }
+  #contact .container .center .leftSide .header {
+    width: 90%;
   }
   #contact .container .center .rightSide {
     width: 100%;
   }
+}
+
+#test {
+  margin-left: 300px;
+  margin-bottom: 100px;
+  padding-top: 80px;
+}
+
+#test ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#test ul .top-tab {
+  width: 100%;
+  background: #fff;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid red;
+}
+
+#test ul .top-tab li {
+  list-style: none;
+  cursor: pointer;
+  margin-right: 25px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+}
+
+#test ul .top-tab li:hover {
+  background: #2ecc71;
+}
+
+#test .filter {
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+#test .filter ul li {
+  list-style: none;
+  background: #ddd;
+  width: 30%;
+  margin: 1.5%;
+  height: 150px;
+}
+
+#test .filter ul li a img {
+  max-width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 100%;
 }
 
 html {

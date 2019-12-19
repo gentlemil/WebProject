@@ -2,17 +2,13 @@
 // --------------------- LAST SECTION - CONTACT -----------------------
 // -------------------------------------------------------------------
 #contact {
-    height: 100vh;
     margin-left: 300px;
     margin-bottom: 130px;
     padding-top: 80px;
-    // background-color: #F6F7FD;
 
     .container {
         width: 95%;
-        height: 80vh;
         margin-left: 30px;
-        // border: 1px solid green;
 
         .title {
             border-left: 6px solid #E3872D;
@@ -81,7 +77,7 @@
                             color: #000000;
                             font-family: 'Montserrat', sans-serif;
                             margin: 0;
-                            padding-bottom: 0
+                            padding-bottom: 0;
                         }
                     }
                 }
@@ -171,7 +167,7 @@
 
 
             .title {
-
+                margin-bottom: 40px;
 
                 h1 {}
 
@@ -184,7 +180,9 @@
                 .leftSide {
                     width: 100%;
 
-                    .header {}
+                    .header {
+                        width: 90%;
+                    }
 
                     .row {
 

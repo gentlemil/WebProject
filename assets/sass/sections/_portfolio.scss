@@ -7,13 +7,13 @@
     padding-top: 80px;
 
     .container {
-        width: 95%;
-        margin-left: 30px;
+        width: 100%;
 
         .title {
             border-left: 6px solid #E3872D;
             padding-left: 15px;
             margin-bottom: 40px;
+            margin-left: 30px;
 
             h1 {
                 font-size: 40px;
@@ -39,65 +39,58 @@
         }
 
         .center {
+            min-height: 100vh;
 
-            .portfolioNavigation {
-                display: inline-block;
+            ul {
+                list-style: none;
+                display: flex;
+                max-width: 100%;
+                background: #fff;
+                margin: 0;
 
-                ul {
+
+                li {
                     list-style: none;
-                    display: flex;
-
-                    li {
-                        margin-right: 25px;
-
-                        a {
-                            font-size: 15px;
-                            font-weight: 700;
-                            line-height: 1.8;
-                            letter-spacing: 0.5px;
-                            color: #000000;
-                            font-family: 'Montserrat', sans-serif;
-                            text-decoration: none;
-
-                        }
-                    }
+                    display: inline-block;
+                    padding: 20px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    font-weight: 700;
+                    line-height: 1.8;
+                    letter-spacing: 0.5px;
+                    color: #000000;
+                    font-family: 'Montserrat', sans-serif;
+                    text-decoration: none;
                 }
             }
 
-            .bigBox {
+            .filter {
                 width: 100%;
-                height: 105vh;
+                min-height: 100vh;
                 display: flex;
                 flex-wrap: wrap;
-                justify-content: space-between;
+                justify-content: center;
                 align-items: center;
-                padding: 10px;
 
-                .box {
-                    display: block;
-                    position: relative;
-                    background-position: center;
-                    background-size: cover;
-                    width: 32%;
-                    height: 48%;
-                    margin: 10px 0;
-                    overflow: hidden;
+                ul {
+                    width: 100%;
+                    min-height: 100vh;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
 
+                    li {
+                        list-style: none;
+                        width: calc(100%/3);
+                        height: 100%;
 
-                    a {
-                        position: absolute;
-                        width: 100%;
-                        height: auto;
-                        // background-position: center;
-                        // max-height: 100%;
-                        // background-size: contain;
-                        // background-repeat: no-repeat;
+                        a {
+                            height: auto;
 
-                        img {
-
-                            max-width: 100%;
-                            object-fit: contain;
-                            max-height: 100%;
+                            img {
+                                width: 100%;
+                                object-fit: contain;
+                            }
                         }
                     }
                 }
