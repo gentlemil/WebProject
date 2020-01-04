@@ -19,29 +19,20 @@
 @import "sections/contact";
 @import "sections/gallery";
 @import "sections/preloading";
-// @import "sections/test";
-// @import "sections/loader";
-
-
 
 html {
     overflow-x: hidden;
     box-sizing: border-box;
     text-align: justify;
-
-    // body {
-    //     max-width: 100vw;
-    //     min-height: 100vh;
-    // }
 }
 
 // -------- RESPONSIVE FOR 768px - 1500px (XIAOMI REDMI 7) -------
 // ---------------------------------------------------------------
-// @media screen and (max-width: 768px) {
-//     html {
-//         max-width: 100vw;
-//     }
-// }
+@media screen and (max-width: 768px) {
+    html {
+        max-width: 100vw;
+    }
+}
 
 // -------------------------------------------------------------------
 // ------------------------------- FOOTER ----------------------------
