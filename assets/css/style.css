@@ -474,9 +474,11 @@ template {
           transform: translate(274px, -150px);
   color: white;
   font-size: 10px;
+  z-index: 100;
+  position: fixed;
 }
 
-#navigation .active {
+#navigation .active-btn {
   -webkit-transform: translate(300px, -120px) rotate(180deg);
           transform: translate(300px, -120px) rotate(180deg);
   z-index: 100;
@@ -594,15 +596,27 @@ template {
 }
 
 #main-page {
-  height: 100vh;
+  min-height: 100vh;
+  max-width: 100%;
   margin-left: 300px;
-  background-image: url(../img/background-image.jpg);
+  margin-right: 0;
   background-size: cover;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 
-#main-page .container {
+#main-page #particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#main-page #particles-js .container {
   background-color: #04123085;
   width: 100%;
   height: 100%;
@@ -621,7 +635,7 @@ template {
           align-items: center;
 }
 
-#main-page .container .profile-photo {
+#main-page #particles-js .container .profile-photo {
   height: 200px;
   width: 100%;
   display: -webkit-box;
@@ -637,19 +651,19 @@ template {
   padding: 0;
 }
 
-#main-page .container .profile-photo img {
+#main-page #particles-js .container .profile-photo img {
   height: 200px;
   width: 200px;
   border: 5px solid grey;
   border-radius: 50%;
 }
 
-#main-page .container .nameHolder {
+#main-page #particles-js .container .nameHolder {
   margin: 0;
   padding: 0;
 }
 
-#main-page .container .nameHolder h1 {
+#main-page #particles-js .container .nameHolder h1 {
   font-size: 40px;
   font-weight: 300;
   line-height: 1.8;
@@ -660,12 +674,12 @@ template {
   padding-bottom: 0;
 }
 
-#main-page .container .nameHolder h1 span {
+#main-page #particles-js .container .nameHolder h1 span {
   color: #E3872D;
   font-family: 'Montserrat', sans-serif;
 }
 
-#main-page .container .nameHolder .textTyping {
+#main-page #particles-js .container .nameHolder .textTyping {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.8;
@@ -680,7 +694,7 @@ template {
           justify-content: center;
 }
 
-#main-page .container .nameHolder .textTyping .typewrite {
+#main-page #particles-js .container .nameHolder .textTyping .typewrite {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.8;
@@ -898,6 +912,8 @@ template {
   display: inline-block;
   position: relative;
   overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #about .container .center .rightPart .buttomsAbout ul li a:hover {
@@ -1059,44 +1075,30 @@ template {
   font-size: 13px;
 }
 
-#abilities .container .rightPart .line {
-  width: 100%;
-  height: 5px;
-}
-
-#abilities .container .rightPart .line .lineInside {
-  height: 100%;
-  width: 100%;
-  display: inline-block;
+#abilities .container .rightPart .progress {
   position: relative;
+  height: 5px;
+  margin: 13px 0;
+  background: #bdc3c7;
+  width: 100%;
+}
+
+#abilities .container .rightPart .progress span {
+  display: block;
+  height: 100%;
+  background-color: #e67e22;
+  position: relative;
+  overflow: hidden;
+}
+
+#abilities button {
+  background-color: orangered;
+}
+
+#abilities button .btnBar {
+  width: 20px;
+  height: 20px;
   cursor: pointer;
-  background: #e1e1e1;
-  color: white;
-  z-index: 0;
-}
-
-#abilities .container .rightPart .line .lineInside:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2098d1;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: 0 50%;
-          transform-origin: 0 50%;
-  -webkit-transition: -webkit-transform .3s ease-out;
-  transition: -webkit-transform .3s ease-out;
-  transition: transform .3s ease-out;
-  transition: transform .3s ease-out, -webkit-transform .3s ease-out;
-}
-
-#abilities .container .rightPart .line .lineInside:hover:before {
-  -webkit-transform: scaleX(0.8);
-          transform: scaleX(0.8);
 }
 
 .active-abilities {
@@ -1197,6 +1199,8 @@ template {
   margin-bottom: 20px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 #services .container .center .box .icon {
@@ -1226,8 +1230,8 @@ template {
 #services .container .center .box:hover {
   -webkit-transform: translate(0, -10px);
           transform: translate(0, -10px);
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 .active-services {
@@ -1355,16 +1359,29 @@ template {
   list-style: none;
   width: calc(100%/3);
   height: 100%;
+  overflow: hidden;
 }
 
 #portfolio .container .center .filter ul li a {
   height: auto;
+  overflow: hidden;
 }
 
 #portfolio .container .center .filter ul li a img {
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  background-size: cover;
+  display: block;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  opacity: 0.7;
+}
+
+#portfolio .container .center .filter ul li a img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 1;
 }
 
 .active-portfolio {
@@ -1389,24 +1406,17 @@ template {
 }
 
 #testimonials {
-  height: 75vh;
   margin-left: 300px;
-  margin-bottom: 30px;
+  max-height: 80vh;
   background-image: url(../img/testimonials.jpeg);
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
 }
 
 #testimonials .container {
-  min-width: 100%;
-  height: 100%;
-  padding: 80px 200px;
+  max-width: 100vw;
   background-color: #041230c0;
-}
-
-#testimonials .container .owl-carousel {
-  min-width: 100%;
+  padding: 0 130px;
 }
 
 #testimonials .container .owl-carousel .quotes .icon {
@@ -1419,6 +1429,8 @@ template {
       -ms-flex-pack: center;
           justify-content: center;
   padding-bottom: 10px;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 #testimonials .container .owl-carousel .quotes .text {
@@ -1452,10 +1464,9 @@ template {
 }
 
 .active-testimonials {
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
-  min-width: 100vw;
-  width: 100%;
+  max-width: 100vw;
+  height: 80vh;
+  margin-left: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -1936,76 +1947,500 @@ template {
   }
 }
 
-#test {
+#gallery {
+  min-width: 100vh;
   margin-left: 300px;
   margin-bottom: 100px;
   padding-top: 80px;
 }
 
-#test ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#test ul .top-tab {
+#gallery .visible .container {
   width: 100%;
-  background: #fff;
-  margin: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid red;
+  min-height: 100vh;
+  margin-left: 30px;
 }
 
-#test ul .top-tab li {
-  list-style: none;
-  cursor: pointer;
-  margin-right: 25px;
-  font-size: 15px;
-  font-weight: 700;
+#gallery .visible .container .title {
+  border-left: 6px solid #E3872D;
+  padding-left: 15px;
+  margin-bottom: 40px;
+}
+
+#gallery .visible .container .title h1 {
+  font-size: 40px;
+  font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
   font-family: 'Montserrat', sans-serif;
-  text-decoration: none;
+  margin: 0;
+  padding-bottom: 0;
 }
 
-#test ul .top-tab li:hover {
-  background: #2ecc71;
+#gallery .visible .container .center {
+  width: 95%;
 }
 
-#test .filter {
+#gallery .visible .container .center h2 {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#gallery .visible .container .center .upperPart {
   width: 100%;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
 }
 
-#test .filter ul li {
+#gallery .visible .container .center .upperPart .list {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#gallery .visible .container .center .upperPart .list .firstCol {
+  width: 50%;
+  font-weight: bolder;
+}
+
+#gallery .visible .container .center .upperPart .list .firstCol ul {
   list-style: none;
-  background: #ddd;
-  width: 30%;
-  margin: 1.5%;
-  height: 150px;
 }
 
-#test .filter ul li a img {
-  max-width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  max-height: 100%;
+#gallery .visible .container .center .upperPart .list .secondCol ul {
+  list-style: none;
+}
+
+#gallery .visible .container .center .upperPart .description {
+  width: 60%;
+}
+
+#gallery .visible .container .center .lowerPart .image1 {
+  min-width: 80%;
+  min-height: 500px;
+  margin: 20px 10px;
+  background-image: url(/assets/img/aoc1.jpg);
+  background-size: cover;
+}
+
+#gallery .visible .container .center .lowerPart .image2 {
+  min-width: 80%;
+  min-height: 500px;
+  margin: 20px 10px;
+  background-image: url(/assets/img/aoc2.jpg);
+  background-size: cover;
+}
+
+#gallery .visible .container .center .lowerPart .image3 {
+  min-width: 80%;
+  min-height: 500px;
+  margin: 20px 10px;
+  background-image: url(/assets/img/aoc3.jpg);
+  background-size: cover;
+}
+
+#gallery .visible .container .center .roller {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 10px;
+}
+
+#gallery .visible .container .center .roller .prev {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#gallery .visible .container .center .roller .next {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.active-gallery {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+  width: 100%;
+  z-index: -1;
+  margin-left: 0;
+  max-width: 100vw;
+  position: relative;
+}
+
+.active {
+  min-width: 100vh;
+  margin-left: 300px;
+  margin-bottom: 100px;
+  padding-top: 80px;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vh;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+#loader-wrapper #loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 1001;
+}
+
+#loader-wrapper #loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #e74c3c;
+  -webkit-animation: spin 3s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper #loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #f9c922;
+  -webkit-animation: spin 1.5s linear infinite;
+  /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.5s linear infinite;
+  /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loaded {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  min-width: 100vw;
+  height: 100%;
+  background: #222222;
+  background: #041230;
+  z-index: 1000;
+  -webkit-transform: translateX(0);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(0);
+  /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section .loaded {
+  -webkit-transform: translateX(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#loader-wrapper .loader-section .loader-section.section-right {
+  right: 0;
+}
+
+#loader-wrapper .loader-section .loaded {
+  -webkit-transform: translateX(100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateX(100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.loaded {
+  visibility: hidden;
+  -webkit-transform: translateY(-100%);
+  /* Chrome, Opera 15+, Safari 3.1+ */
+  /* IE 9 */
+  transform: translateY(-100%);
+  /* Firefox 16+, IE 10+, Opera */
+  -webkit-transition: all 0.3s 1s ease-out;
+  transition: all 0.3s 1s ease-out;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(0deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    /* Chrome, Opera 15+, Safari 3.1+ */
+    /* IE 9 */
+    transform: rotate(360deg);
+    /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+/* JavaScript Turned Off */
+.no-js #loader-wrapper {
+  display: none;
+}
+
+.no-js h1 {
+  color: #222222;
+}
+
+/* ==========================================================================
+       Helper classes
+       ========================================================================== */
+/*
+     * Image replacement
+     */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%;
+}
+
+/*
+     * Hide from both screenreaders and browsers: h5bp.com/u
+     */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/*
+     * Hide only visually, but have it available for screenreaders: h5bp.com/v
+     */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/*
+     * Extends the .visuallyhidden class to allow the element to be focusable
+     * when navigated to via the keyboard: h5bp.com/p
+     */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/*
+     * Hide visually and from screenreaders, but maintain layout
+     */
+.invisible {
+  visibility: hidden;
+}
+
+/*
+     * Clearfix: contain floats
+     *
+     * For modern browsers
+     * 1. The space content is one way to avoid an Opera bug when the
+     *    `contenteditable` attribute is included anywhere else in the document.
+     *    Otherwise it causes space to appear at the top and bottom of elements
+     *    that receive the `clearfix` class.
+     * 2. The use of `table` rather than `block` is only necessary if using
+     *    `:before` to contain the top-margins of child elements.
+     */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/*
+     * For IE 6/7 only
+     * Include this rule to trigger hasLayout and contain floats.
+     */
+.clearfix {
+  *zoom: 1;
+}
+
+/* ==========================================================================
+       EXAMPLE Media Queries for Responsive Design.
+       These examples override the primary ('mobile first') styles.
+       Modify as content requires.
+       ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+       Print styles.
+       Inlined to avoid required HTTP connection: h5bp.com/r
+       ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+         * Don't show links for images, or javascript/internal links
+         */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  img {
+    max-width: 100% !important;
+  }
+  @page {
+    margin: 0.5cm;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 }
 
 html {
@@ -2050,5 +2485,27 @@ footer p {
     margin: 10px;
     overflow-x: hidden;
   }
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #E3872D;
+  color: white;
+  cursor: pointer;
+  padding: 10px 13px;
+  border-radius: 5px;
+  font-size: 15px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#myBtn:hover {
+  background-color: #041230;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,6 @@
 // -------------------------------------------------------------------
 // ---------------------- SECTION 2 - ABOUT --------------------------
 // -------------------------------------------------------------------
-// Poprawic napis (rightPart)
-// Zrobic hover na obrazku i przy przyciskach
-// Wyrownac liste do lewej strony (CHOLERA JAK?)
 
 #about {
     // min-width: 100vh;
@@ -48,14 +45,9 @@
             width: 95%;
             display: flex;
             justify-content: center;
-            // align-items: center;
-            // margin: 30px;
-            // border: 3px solid red;
-
 
             .leftPart {
                 width: 45%;
-                // border: 1px solid green;
                 position: relative;
 
 
@@ -70,7 +62,6 @@
 
                 .photo {
                     width: 350px;
-                    // height: 365px;
                     position: absolute;
                     z-index: 2;
 
@@ -185,6 +176,7 @@
                                 display: inline-block;
                                 position: relative;
                                 overflow: hidden;
+                                transition: all 0.5s;
                             }
 
                             a:hover {

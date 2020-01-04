@@ -1,72 +1,74 @@
 // -------------------------------------------------------------------
 // ------------------------- MAIN PAGE -------------------------------
 // -------------------------------------------------------------------
-// Poprawic czcionke
 #main-page {
-    height: 100vh;
+    min-height: 100vh;
+    max-width: 100%;
     margin-left: 300px;
-    background-image: url(../img/background-image.jpg);
+    margin-right: 0;
+    // background-image: url(../img/background-image.jpg);
     background-size: cover;
     position: relative;
     overflow: hidden;
+    z-index: 0;
 
-    .container {
-        background-color: #04123085;
+    #particles-js {
+        position: absolute;
         width: 100%;
         height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        // background-color: #b61924;
+        background-image: url("../img/background-image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
 
-        .profile-photo {
-            height: 200px;
+        .container {
+            background-color: #04123085;
             width: 100%;
+            height: 100%;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            margin: 50px 0 20px 0;
-            padding: 0;
 
-            img {
+            .profile-photo {
                 height: 200px;
-                width: 200px;
-                border: 5px solid grey;
-                border-radius: 50%;
-            }
-        }
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 50px 0 20px 0;
+                padding: 0;
 
-        .nameHolder {
-            margin: 0;
-            padding: 0;
-
-            h1 {
-                font-size: 40px;
-                font-weight: 300;
-                line-height: 1.8;
-                letter-spacing: 0.5px;
-                color: $mainFontColor;
-                font-family: 'Montserrat', sans-serif;
-                margin: 0;
-                padding-bottom: 0;
-
-                span {
-                    color: #E3872D;
-                    font-family: 'Montserrat', sans-serif;
+                img {
+                    height: 200px;
+                    width: 200px;
+                    border: 5px solid grey;
+                    border-radius: 50%;
                 }
             }
 
-            .textTyping {
-                font-size: 20px;
-                font-weight: 300;
-                line-height: 1.8;
-                letter-spacing: 0.5px;
-                color: $mainFontColor;
-                font-family: 'Montserrat', sans-serif;
-                display: flex;
-                justify-content: center;
+            .nameHolder {
+                margin: 0;
+                padding: 0;
 
-                .typewrite {
+                h1 {
+                    font-size: 40px;
+                    font-weight: 300;
+                    line-height: 1.8;
+                    letter-spacing: 0.5px;
+                    color: $mainFontColor;
+                    font-family: 'Montserrat', sans-serif;
+                    margin: 0;
+                    padding-bottom: 0;
+
+                    span {
+                        color: #E3872D;
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                }
+
+                .textTyping {
                     font-size: 20px;
                     font-weight: 300;
                     line-height: 1.8;
@@ -75,6 +77,17 @@
                     font-family: 'Montserrat', sans-serif;
                     display: flex;
                     justify-content: center;
+
+                    .typewrite {
+                        font-size: 20px;
+                        font-weight: 300;
+                        line-height: 1.8;
+                        letter-spacing: 0.5px;
+                        color: $mainFontColor;
+                        font-family: 'Montserrat', sans-serif;
+                        display: flex;
+                        justify-content: center;
+                    }
                 }
             }
         }

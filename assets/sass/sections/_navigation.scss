@@ -112,9 +112,11 @@
         transform: translate(274px, -150px);
         color: white;
         font-size: 10px;
+        z-index: 100;
+        position: fixed;
     }
 
-    .active {
+    .active-btn {
         transform: translate(300px, -120px) rotate(180deg);
         z-index: 100;
     }

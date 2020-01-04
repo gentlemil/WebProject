@@ -52,7 +52,7 @@
                 padding: 20px;
                 margin-bottom: 20px;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+                transition: all 0.5s;
 
                 .icon {
                     font-size: 50px;
@@ -76,13 +76,13 @@
                     letter-spacing: 0.5px;
                     color: #000000;
                     font-family: 'Montserrat', sans-serif;
+
                 }
             }
 
             .box:hover {
                 transform: translate(0, -10px);
-                // opacity: 0.5s all;
-                transition: 0.5s all;
+                transition: all 0.5s;
             }
         }
     }
