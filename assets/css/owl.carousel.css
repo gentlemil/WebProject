@@ -3,7 +3,7 @@
  */
 .owl-carousel {
   display: none;
-  min-width: 100vw;
+  width: 100%;
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
   position: relative;

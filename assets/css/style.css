@@ -357,6 +357,7 @@ template {
   height: 100vh;
   margin: 0;
   padding: 0;
+  z-index: 10000;
 }
 
 #navigation .logo {
@@ -1408,20 +1409,26 @@ template {
 }
 
 #testimonials {
-  margin-left: 300px;
-  max-height: 80vh;
-  background-image: url(../img/testimonials.jpeg);
-  background-size: cover;
-  background-position: center;
-}
-
-#testimonials .container {
   max-width: 100vw;
-  background-color: #041230c0;
-  padding: 0 130px;
+  margin-left: 300px;
+  max-height: 60vh;
+  background-image: url(/assets/img/testimonials.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  z-index: 0;
 }
 
-#testimonials .container .owl-carousel .quotes .icon {
+#testimonials .owl-carousel {
+  background-color: #041230c0;
+  padding-right: 100px;
+}
+
+#testimonials .owl-carousel .quotes {
+  width: 60%;
+}
+
+#testimonials .owl-carousel .quotes .icon {
   font-size: 32px;
   color: #E3872D;
   display: -webkit-box;
@@ -1435,7 +1442,7 @@ template {
       align-content: center;
 }
 
-#testimonials .container .owl-carousel .quotes .text {
+#testimonials .owl-carousel .quotes .text {
   color: #fff;
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -1450,7 +1457,7 @@ template {
   text-align: center;
 }
 
-#testimonials .container .owl-carousel .quotes .author {
+#testimonials .owl-carousel .quotes .author {
   color: #fff;
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
@@ -1465,10 +1472,17 @@ template {
   text-align: center;
 }
 
+#testimonials .active-testimonials-owl {
+  padding-left: 100px;
+}
+
 .active-testimonials {
-  max-width: 100vw;
-  height: 80vh;
-  margin-left: 0;
+  margin: 0;
+  min-width: 100vw;
+  max-height: 60vh;
+  width: 100%;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 @media screen and (max-width: 768px) {
@@ -1775,8 +1789,10 @@ template {
 
 #contact {
   margin-left: 300px;
-  margin-bottom: 130px;
+  margin-bottom: 200px;
   padding-top: 80px;
+  height: 100%;
+  max-height: 60vh;
 }
 
 #contact .container {
@@ -1956,19 +1972,19 @@ template {
   padding-top: 80px;
 }
 
-#gallery .visible .container {
+#gallery .dupa .container {
   width: 100%;
   min-height: 100vh;
   margin-left: 30px;
 }
 
-#gallery .visible .container .title {
+#gallery .dupa .container .title {
   border-left: 6px solid #E3872D;
   padding-left: 15px;
   margin-bottom: 40px;
 }
 
-#gallery .visible .container .title h1 {
+#gallery .dupa .container .title h1 {
   font-size: 40px;
   font-weight: 300;
   line-height: 1.8;
@@ -1979,11 +1995,11 @@ template {
   padding-bottom: 0;
 }
 
-#gallery .visible .container .center {
+#gallery .dupa .container .center {
   width: 95%;
 }
 
-#gallery .visible .container .center h2 {
+#gallery .dupa .container .center h2 {
   font-size: 25px;
   font-weight: 300;
   line-height: 1.8;
@@ -1994,7 +2010,7 @@ template {
   padding-bottom: 0;
 }
 
-#gallery .visible .container .center .upperPart {
+#gallery .dupa .container .center .upperPart {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2015,31 +2031,31 @@ template {
   padding-bottom: 0;
 }
 
-#gallery .visible .container .center .upperPart .list {
+#gallery .dupa .container .center .upperPart .list {
   width: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#gallery .visible .container .center .upperPart .list .firstCol {
+#gallery .dupa .container .center .upperPart .list .firstCol {
   width: 50%;
   font-weight: bolder;
 }
 
-#gallery .visible .container .center .upperPart .list .firstCol ul {
+#gallery .dupa .container .center .upperPart .list .firstCol ul {
   list-style: none;
 }
 
-#gallery .visible .container .center .upperPart .list .secondCol ul {
+#gallery .dupa .container .center .upperPart .list .secondCol ul {
   list-style: none;
 }
 
-#gallery .visible .container .center .upperPart .description {
+#gallery .dupa .container .center .upperPart .description {
   width: 60%;
 }
 
-#gallery .visible .container .center .lowerPart .image1 {
+#gallery .dupa .container .center .lowerPart .image1 {
   min-width: 80%;
   min-height: 500px;
   margin: 20px 10px;
@@ -2047,7 +2063,7 @@ template {
   background-size: cover;
 }
 
-#gallery .visible .container .center .lowerPart .image2 {
+#gallery .dupa .container .center .lowerPart .image2 {
   min-width: 80%;
   min-height: 500px;
   margin: 20px 10px;
@@ -2055,7 +2071,7 @@ template {
   background-size: cover;
 }
 
-#gallery .visible .container .center .lowerPart .image3 {
+#gallery .dupa .container .center .lowerPart .image3 {
   min-width: 80%;
   min-height: 500px;
   margin: 20px 10px;
@@ -2063,7 +2079,7 @@ template {
   background-size: cover;
 }
 
-#gallery .visible .container .center .roller {
+#gallery .dupa .container .center .roller {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2073,7 +2089,7 @@ template {
   margin: 10px;
 }
 
-#gallery .visible .container .center .roller .prev {
+#gallery .dupa .container .center .roller .prev {
   font-size: 12px;
   font-weight: 300;
   line-height: 1.8;
@@ -2084,7 +2100,7 @@ template {
   padding-bottom: 0;
 }
 
-#gallery .visible .container .center .roller .next {
+#gallery .dupa .container .center .roller .next {
   font-size: 12px;
   font-weight: 300;
   line-height: 1.8;
@@ -2119,7 +2135,7 @@ template {
   min-width: 100vh;
   width: 100%;
   height: 100%;
-  z-index: 1000;
+  z-index: 1000000;
 }
 
 #loader-wrapper #loader {
