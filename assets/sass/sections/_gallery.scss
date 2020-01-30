@@ -155,3 +155,70 @@
     margin-bottom: 100px;
     padding-top: 80px;
 }
+
+@media screen and (max-width: 768px) {
+    #gallery {
+        margin: 10px 15px;
+        max-width: 100vw;
+        width: 100%;
+        padding-top: 20px;
+        margin: 10px;
+        overflow-x: hidden;
+
+        .dupa {
+
+
+            .container {
+                margin-left: 10%;
+
+                .title {
+
+
+                    h1 {}
+                }
+
+                .center {
+
+
+                    h2 {}
+
+                    .upperPart {
+
+
+                        .list {
+
+
+                            .firstCol {
+
+
+                                ul {}
+                            }
+
+                            .secondCol {
+                                ul {}
+                            }
+                        }
+
+                        .description {}
+                    }
+
+                    .lowerPart {
+                        .image1 {}
+
+                        .image2 {}
+
+                        .image3 {}
+                    }
+
+                    .roller {
+
+
+                        .prev {}
+
+                        .next {}
+                    }
+                }
+            }
+        }
+    }
+}
