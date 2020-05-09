@@ -1,6 +1,4 @@
-// -------------------------------------------------------------------
-// ---------------------- SECTION 2 - ABOUT --------------------------
-// -------------------------------------------------------------------
+// -------- SECTION 2 - ABOUT -----------
 
 #about {
     margin-left: 300px;
@@ -9,14 +7,12 @@
 
     .container {
         width: 100%;
-        height: 100vh;
-        margin-left: 300px;
+        height: 100%;
         padding-left: 45px;
 
         .title {
             border-left: 6px solid #E3872D;
             padding-left: 15px;
-            // margin-left: 45px;
             margin-bottom: 40px;
 
             h1 {
@@ -25,7 +21,6 @@
                 line-height: 1.8;
                 letter-spacing: 0.5px;
                 color: #000000;
-                font-family: 'Montserrat', sans-serif;
                 margin: 0;
                 padding-bottom: 0;
             }
@@ -36,7 +31,6 @@
                 line-height: 1.8;
                 letter-spacing: 0.5px;
                 color: #000000;
-                font-family: 'Montserrat', sans-serif;
                 margin: 0;
                 padding-bottom: 0;
             }
@@ -74,7 +68,6 @@
 
             .rightPart {
                 width: 55%;
-                font-family: 'Montserrat', sans-serif;
                 font-size: 13px;
                 line-height: 1.8;
                 letter-spacing: 0.5px;
@@ -95,7 +88,6 @@
                             line-height: 1.8;
                             letter-spacing: 0.5px;
                             color: $mainFontColor;
-                            font-family: 'Montserrat', sans-serif;
                             display: flex;
                             justify-content: center;
                         }
@@ -126,24 +118,45 @@
                     }
 
                     .secondCol {
+                        display: block;
+                        margin-inline-start: 0px;
+                        margin-inline-end: 0px;
+                        padding-inline-start: 0px;
+
                         ul {
                             list-style: none;
+                            padding-left: 0;
+                            margin-left: o;
 
                             li {}
                         }
                     }
 
                     .thirdCol {
+                        display: block;
+                        margin-inline-start: 0px;
+                        margin-inline-end: 0px;
+                        padding-inline-start: 0px;
+
                         ul {
                             list-style: none;
+                            padding-left: 0;
+                            margin-left: o;
 
                             li {}
                         }
                     }
 
                     .fourthCol {
+                        display: block;
+                        margin-inline-start: 0px;
+                        margin-inline-end: 0px;
+                        padding-inline-start: 0px;
+
                         ul {
                             list-style: none;
+                            padding-left: 0;
+                            margin-left: o;
 
                             li {}
                         }
@@ -152,8 +165,7 @@
 
                 .buttomsAbout {
                     display: flex;
-                    justify-content: left;
-                    // margin: 0 auto;
+                    justify-content: space-around;
                     padding: 0;
 
                     ul {
@@ -161,7 +173,6 @@
                         display: flex;
                         justify-content: center;
                         margin: 0;
-
 
                         li {
                             padding-right: 20px;
@@ -171,7 +182,6 @@
                                 color: #fff;
                                 background-color: #E3872D;
                                 font-weight: 600;
-                                font-family: "Montserrat";
                                 padding: 12px 35px;
                                 border-radius: 3px;
                                 display: inline-block;
@@ -189,29 +199,30 @@
             }
         }
     }
+
+    .active-cont {
+        transform: translateX(-300px);
+    }
 }
 
 .active-about {
-    transform: translateX(-300px);
-    width: 100%;
+    width: 100vw;
+    margin-left: 0px;
+    padding-left: 0px;
     padding: 0 80px;
 }
 
-// -------- RESPONSIVE FOR 768px - 1500px (XIAOMI REDMI 7) -------
-// ---------------------------------------------------------------
 @media screen and (max-width: 768px) {
     #about {
-        margin: 10px 15px;
-        max-width: 100vw;
-        max-height: 100%;
-        // width: 100%;
-        padding-top: 20px;
-        margin: 0 10px 10px 10px;
-        overflow-x: hidden;
+        transform: translateX(-300px);
 
         .container {
-            padding-top: 0;
-            height: 100%;
+            padding: 0 10px;
+            margin: 0 auto;
+
+            .title {
+                width: 100vw;
+            }
 
             .center {
                 display: block;
@@ -236,7 +247,7 @@
 
                         .firstCol {
                             ul {
-                                margin: 10px 40px 10px 10px;
+                                margin: 10px 30px 10px 10px;
                                 padding: 0;
 
                                 li {
@@ -247,7 +258,7 @@
 
                         .secondCol {
                             ul {
-                                margin: 10px 40px 10px 30px;
+                                margin: 10px 30px 10px 30px;
                                 padding: 0;
 
                                 li {}

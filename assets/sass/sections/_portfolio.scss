@@ -1,15 +1,11 @@
-// -------------------------------------------------------------------
-// ------------------- SECTION 5 - PORTFOLIO ----------------
-// -------------------------------------------------------------------
+// ---------- SECTION 5 - PORTFOLIO -----------
 #portfolio {
     margin-left: 300px;
     margin-bottom: 100px;
-    padding-top: 80px;
 
     .container {
         width: 100%;
         height: 100%;
-        margin-left: 300px;
         padding-left: 45px;
 
         .title {
@@ -24,7 +20,6 @@
                 line-height: 1.8;
                 letter-spacing: 0.5px;
                 color: #000000;
-                font-family: 'Montserrat', sans-serif;
                 margin: 0;
                 padding-bottom: 0;
             }
@@ -35,7 +30,6 @@
                 line-height: 1.8;
                 letter-spacing: 0.5px;
                 color: #000000;
-                font-family: 'Montserrat', sans-serif;
                 margin: 0;
                 padding-bottom: 0;
             }
@@ -52,7 +46,6 @@
                 background: #fff;
                 margin: 0;
 
-
                 li {
                     list-style: none;
                     display: inline-block;
@@ -63,7 +56,6 @@
                     line-height: 1.8;
                     letter-spacing: 0.5px;
                     color: #000000;
-                    font-family: 'Montserrat', sans-serif;
                     text-decoration: none;
                 }
             }
@@ -76,14 +68,14 @@
                 justify-content: center;
                 align-items: center;
 
-                ul {
+                .filter__elements {
                     width: 100%;
                     min-height: 100vh;
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
 
-                    li {
+                    .item-list {
                         list-style: none;
                         width: calc(100%/3);
                         height: 100%;
@@ -105,7 +97,6 @@
                             img:hover {
                                 transform: scale(1.05);
                                 opacity: 1;
-
                             }
                         }
                     }
@@ -115,69 +106,72 @@
     }
 
     .active-cont {
-        // padding-left: 100px;
-        margin-left: 0px;
+        transform: translateX(-300px);
     }
 }
 
 .active-portfolio {
-    // transform: translateX(-300px);
     width: 100vw;
     margin-left: 0px;
+    padding-left: 0px;
     padding: 0 80px;
 }
 
-// -------- RESPONSIVE FOR 768px - 1500px (XIAOMI REDMI 7) -------
-// ---------------------------------------------------------------
 @media screen and (max-width: 768px) {
     #portfolio {
-        margin: 10px 15px;
-        max-width: 100vw;
-        width: 100%;
+        height: 100%;
+        width: 100vw;
         padding-top: 20px;
         margin: 10px;
         overflow-x: hidden;
 
         .container {
-
-
-            .title {
-
-                h1 {}
-
-                h3 {}
-            }
+            height: 100%;
+            width: 100vw;
+            padding: 0 10px;
+            margin: 0 auto;
 
             .center {
+                width: 100vw;
 
-                .portfolioNavigation {
-
-
-                    ul {
-
-                        li {
-
-                            a {}
-                        }
-                    }
+                .top-tab {
+                    display: none;
                 }
 
-                .bigBox {
+                .filter {
+                    width: 100%;
+                    height: 100%;
+                    padding: 0;
+                    margin: 0 auto;
 
+                    .filter__elements {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
 
-                    .box {
-                        width: 50%;
+                        .item-list {
+                            width: 100%;
+                            margin: 0 auto;
+                            padding: 15px;
 
-                        a {
+                            a {
+                                width: 100%;
+                                height: 100%;
+                                margin: 0;
+                                padding: 0;
 
-                            img {}
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    margin: 0;
+                                    padding: 0;
+
+                                }
+                            }
                         }
                     }
                 }
             }
         }
     }
-
-
-
 }

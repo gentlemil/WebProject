@@ -599,26 +599,25 @@ template {
 #main-page {
   height: 100vh;
   width: 100vw;
-  margin-left: 300px;
-  margin-right: 0;
+  margin: 0;
   background-size: cover;
   position: relative;
   overflow: hidden;
-  z-index: 0;
+  z-index: -100;
 }
 
-#main-page #particles-js {
+#main-page .particles {
   position: absolute;
   width: 100%;
   height: 100%;
   background-image: url("../img/background-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
   background-attachment: fixed;
+  z-index: -100;
 }
 
-#main-page #particles-js .container {
+#main-page .particles .container {
   background-color: #04123085;
   width: 100%;
   height: 100%;
@@ -635,11 +634,10 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 auto;
   padding-left: 300px;
 }
 
-#main-page #particles-js .container .profile-photo {
+#main-page .particles .container .profile-photo {
   height: 200px;
   width: 100%;
   display: -webkit-box;
@@ -655,42 +653,39 @@ template {
   padding: 0;
 }
 
-#main-page #particles-js .container .profile-photo img {
+#main-page .particles .container .profile-photo img {
   height: 200px;
   width: 200px;
   border: 5px solid grey;
   border-radius: 50%;
 }
 
-#main-page #particles-js .container .nameHolder {
+#main-page .particles .container .nameHolder {
   margin: 0;
   padding: 0;
 }
 
-#main-page #particles-js .container .nameHolder h1 {
+#main-page .particles .container .nameHolder h1 {
   font-size: 40px;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #E4E6E9;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
   color: #E3872D;
 }
 
-#main-page #particles-js .container .nameHolder h1 span {
+#main-page .particles .container .nameHolder h1 span {
   color: #E3872D;
-  font-family: 'Montserrat', sans-serif;
 }
 
-#main-page #particles-js .container .nameHolder .textTyping {
+#main-page .particles .container .nameHolder .textTyping {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #E4E6E9;
-  font-family: 'Montserrat', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -699,13 +694,12 @@ template {
           justify-content: center;
 }
 
-#main-page #particles-js .container .nameHolder .textTyping .typewrite {
+#main-page .particles .container .nameHolder .textTyping .typewrite {
   font-size: 20px;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #E4E6E9;
-  font-family: 'Montserrat', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -714,19 +708,16 @@ template {
           justify-content: center;
 }
 
-#main-page #particles-js .active-cont {
+#main-page .particles .active-cont {
+  padding-left: 0;
+}
+
+#main-page .active-cont {
   padding-left: 0;
 }
 
 .active-main {
   width: 100%;
-  z-index: -1;
-  margin-left: 0;
-  max-width: 100vw;
-  min-height: 100vh;
-  height: 100%;
-  position: relative;
-  padding-top: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -734,6 +725,9 @@ template {
     margin-left: 0;
     width: 100vw;
     overflow-x: hidden;
+  }
+  #main-page .particles .container {
+    padding-left: 0;
   }
 }
 
@@ -745,8 +739,7 @@ template {
 
 #about .container {
   width: 100%;
-  height: 100vh;
-  margin-left: 300px;
+  height: 100%;
   padding-left: 45px;
 }
 
@@ -762,7 +755,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -773,7 +765,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -815,7 +806,6 @@ template {
 
 #about .container .center .rightPart {
   width: 55%;
-  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   line-height: 1.8;
   letter-spacing: 0.5px;
@@ -839,7 +829,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #E4E6E9;
-  font-family: 'Montserrat', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -875,25 +864,60 @@ template {
   margin-left: o;
 }
 
+#about .container .center .rightPart .list .secondCol {
+  display: block;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
+}
+
 #about .container .center .rightPart .list .secondCol ul {
   list-style: none;
+  padding-left: 0;
+  margin-left: o;
+}
+
+#about .container .center .rightPart .list .thirdCol {
+  display: block;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 
 #about .container .center .rightPart .list .thirdCol ul {
   list-style: none;
+  padding-left: 0;
+  margin-left: o;
+}
+
+#about .container .center .rightPart .list .fourthCol {
+  display: block;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+  -webkit-padding-start: 0px;
+          padding-inline-start: 0px;
 }
 
 #about .container .center .rightPart .list .fourthCol ul {
   list-style: none;
+  padding-left: 0;
+  margin-left: o;
 }
 
 #about .container .center .rightPart .buttomsAbout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding: 0;
 }
 
@@ -917,7 +941,6 @@ template {
   color: #fff;
   background-color: #E3872D;
   font-weight: 600;
-  font-family: "Montserrat";
   padding: 12px 35px;
   border-radius: 3px;
   display: inline-block;
@@ -931,25 +954,29 @@ template {
   background-color: #041230;
 }
 
-.active-about {
+#about .active-cont {
   -webkit-transform: translateX(-300px);
           transform: translateX(-300px);
-  width: 100%;
+}
+
+.active-about {
+  width: 100vw;
+  margin-left: 0px;
+  padding-left: 0px;
   padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {
   #about {
-    margin: 10px 15px;
-    max-width: 100vw;
-    max-height: 100%;
-    padding-top: 20px;
-    margin: 0 10px 10px 10px;
-    overflow-x: hidden;
+    -webkit-transform: translateX(-300px);
+            transform: translateX(-300px);
   }
   #about .container {
-    padding-top: 0;
-    height: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  #about .container .title {
+    width: 100vw;
   }
   #about .container .center {
     display: block;
@@ -977,14 +1004,14 @@ template {
         flex-wrap: wrap;
   }
   #about .container .center .rightPart .list .firstCol ul {
-    margin: 10px 40px 10px 10px;
+    margin: 10px 30px 10px 10px;
     padding: 0;
   }
   #about .container .center .rightPart .list .firstCol ul li {
     width: 100%;
   }
   #about .container .center .rightPart .list .secondCol ul {
-    margin: 10px 40px 10px 30px;
+    margin: 10px 30px 10px 30px;
     padding: 0;
   }
   #about .container .center .rightPart .list .thirdCol ul {
@@ -1013,47 +1040,77 @@ template {
 }
 
 #abilities .container {
-  height: 50%;
   width: 100%;
+  height: 100%;
+  padding-left: 45px;
+}
+
+#abilities .container .title {
+  border-left: 6px solid #E3872D;
+  padding-left: 15px;
+  margin-bottom: 50px;
+}
+
+#abilities .container .title h1 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#abilities .container .title h3 {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  color: #000000;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+#abilities .container .content {
+  width: 75vw;
+  background-color: #F6F7FD;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #F6F7FD;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-left: 300px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
-#abilities .container .leftPart {
+#abilities .container .content .leftPart {
   height: 100%;
   width: 35%;
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-left: 30px;
   font-weight: bolder;
 }
 
-#abilities .container .leftPart h3 {
+#abilities .container .content .leftPart h3 {
+  width: 100%;
   margin: 0;
   padding: 0 20px;
   font-size: 28px;
   font-weight: 300;
 }
 
-#abilities .container .leftPart p {
+#abilities .container .content .leftPart p {
   font-size: 12px;
   font-weight: 300;
   text-align: justify;
 }
 
-#abilities .container .activeLeftPart {
-  padding-left: 100px;
-}
-
-#abilities .container .rightPart {
+#abilities .container .content .rightPart {
   width: 65%;
   margin: 0 auto;
   padding: 0 40px;
@@ -1061,7 +1118,7 @@ template {
       align-content: center;
 }
 
-#abilities .container .rightPart .text {
+#abilities .container .content .rightPart .text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1074,15 +1131,14 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 7px 0;
 }
 
-#abilities .container .rightPart .text div {
+#abilities .container .content .rightPart .text div {
   font-size: 13px;
 }
 
-#abilities .container .rightPart .progress {
+#abilities .container .content .rightPart .progress {
   position: relative;
   height: 5px;
   margin: 13px 0;
@@ -1090,12 +1146,17 @@ template {
   width: 100%;
 }
 
-#abilities .container .rightPart .progress span {
+#abilities .container .content .rightPart .progress span {
   display: block;
   height: 100%;
   background-color: #e67e22;
   position: relative;
   overflow: hidden;
+}
+
+#abilities .active-cont {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 #abilities button {
@@ -1109,55 +1170,83 @@ template {
 }
 
 .active-abilities {
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
-  width: 100%;
+  width: 100vw;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {
   #abilities {
-    margin: 0 15px;
     height: 100%;
-    width: 100%;
+    width: 100vw;
+    padding-top: 20px;
     margin: 10px;
     overflow-x: hidden;
   }
   #abilities .container {
-    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #abilities .container .title {
+    padding: 0 10px;
+  }
+  #abilities .container .title h1 {
+    font-size: 25px;
+  }
+  #abilities .container .content {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 10px;
+  }
+  #abilities .container .content .leftPart {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  #abilities .container .content .leftPart h3 {
+    font-size: 25px;
+    width: 90vw;
     margin: 0;
     padding: 0;
-    padding: 60px 0;
   }
-  #abilities .container .leftPart {
-    display: block;
-    width: 100%;
-    padding: 0 15px;
-    margin: 0;
-    height: 30vh;
-  }
-  #abilities .container .leftPart h3 {
-    display: inline-block;
+  #abilities .container .content .leftPart p {
+    width: 90vw;
     margin: 0;
     padding: 0;
   }
-  #abilities .container .rightPart {
+  #abilities .container .content .rightPart {
     width: 100%;
-    padding: 10px;
     margin: 0;
+    padding: 0;
+  }
+  #abilities .container .content .rightPart .progress {
+    max-width: 90vw;
+    margin: 0;
+    padding: 0;
   }
 }
 
 #services {
   margin-left: 300px;
-  margin-bottom: 100px;
-  padding: 80px 0;
+  padding-top: 80px;
   min-height: 100vh;
 }
 
 #services .container {
   width: 100%;
   height: 100vh;
-  margin-left: 300px;
   padding-left: 45px;
 }
 
@@ -1173,7 +1262,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1184,28 +1272,27 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
 
 #services .container .center {
-  width: 100%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 50px;
 }
 
 #services .container .center .box {
   height: 300px;
   width: 300px;
   padding: 20px 30px;
-  margin: 15px 10px;
+  margin: 20px;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-transition: all 0.5s;
@@ -1224,7 +1311,6 @@ template {
   letter-spacing: 0.5px;
   color: #000000;
   font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
 }
 
 #services .container .center .box p {
@@ -1233,7 +1319,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
 }
 
 #services .container .center .box:hover {
@@ -1244,43 +1329,47 @@ template {
 }
 
 #services .active-cont {
-  padding-left: 100px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 .active-services {
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
-  width: 100%;
+  width: 100vw;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {
   #services {
-    min-height: 100vh;
-    width: 100%;
+    height: 100%;
+    width: 100vw;
     padding-top: 20px;
     margin: 10px;
     overflow-x: hidden;
   }
   #services .container {
-    margin: 0;
+    height: 100%;
+    width: 100vw;
     padding: 0 10px;
+    margin: 0 auto;
+  }
+  #services .container .center {
+    padding: 0;
   }
   #services .container .center .box {
-    width: 100%;
-    margin: 10px 5px;
+    margin: 10px;
   }
 }
 
 #portfolio {
   margin-left: 300px;
   margin-bottom: 100px;
-  padding-top: 80px;
 }
 
 #portfolio .container {
   width: 100%;
   height: 100%;
-  margin-left: 300px;
   padding-left: 45px;
 }
 
@@ -1297,7 +1386,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1308,7 +1396,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1338,7 +1425,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
 }
 
@@ -1358,7 +1444,7 @@ template {
           align-items: center;
 }
 
-#portfolio .container .center .filter ul {
+#portfolio .container .center .filter .filter__elements {
   width: 100%;
   min-height: 100vh;
   display: -webkit-box;
@@ -1371,19 +1457,19 @@ template {
           justify-content: center;
 }
 
-#portfolio .container .center .filter ul li {
+#portfolio .container .center .filter .filter__elements .item-list {
   list-style: none;
   width: calc(100%/3);
   height: 100%;
   overflow: hidden;
 }
 
-#portfolio .container .center .filter ul li a {
+#portfolio .container .center .filter .filter__elements .item-list a {
   height: auto;
   overflow: hidden;
 }
 
-#portfolio .container .center .filter ul li a img {
+#portfolio .container .center .filter .filter__elements .item-list a img {
   width: 100%;
   background-size: cover;
   display: block;
@@ -1394,38 +1480,75 @@ template {
   opacity: 0.7;
 }
 
-#portfolio .container .center .filter ul li a img:hover {
+#portfolio .container .center .filter .filter__elements .item-list a img:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   opacity: 1;
 }
 
 #portfolio .active-cont {
-  margin-left: 0px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 .active-portfolio {
   width: 100vw;
   margin-left: 0px;
+  padding-left: 0px;
   padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {
   #portfolio {
-    margin: 10px 15px;
-    max-width: 100vw;
-    width: 100%;
+    height: 100%;
+    width: 100vw;
     padding-top: 20px;
     margin: 10px;
     overflow-x: hidden;
   }
-  #portfolio .container .center .bigBox .box {
-    width: 50%;
+  #portfolio .container {
+    height: 100%;
+    width: 100vw;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  #portfolio .container .center {
+    width: 100vw;
+  }
+  #portfolio .container .center .top-tab {
+    display: none;
+  }
+  #portfolio .container .center .filter {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  #portfolio .container .center .filter .filter__elements {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #portfolio .container .center .filter .filter__elements .item-list {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  #portfolio .container .center .filter .filter__elements .item-list a {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #portfolio .container .center .filter .filter__elements .item-list a img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
   }
 }
 
 #testimonials {
-  margin-left: 300px;
   margin-bottom: 100px;
   height: 60vh;
   width: 100vw;
@@ -1478,7 +1601,6 @@ template {
 #testimonials .container .quotes .text {
   color: #fff;
   font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   line-height: 1.4;
   display: -webkit-box;
@@ -1493,7 +1615,6 @@ template {
 #testimonials .container .quotes .author {
   color: #fff;
   font-size: 20px;
-  font-family: 'Montserrat', sans-serif;
   font-weight: 100;
   line-height: 1.4;
   display: -webkit-box;
@@ -1516,27 +1637,25 @@ template {
 .active-testimonials {
   width: 100vw;
   margin-left: 0px;
+  padding-left: 0px;
 }
 
 @media screen and (max-width: 768px) {
   #testimonials {
-    height: 100vh;
-    margin: 10px 15px;
-    max-width: 100vw;
-    width: 100%;
-    padding-top: 20px;
-    margin: 10px;
+    height: 100%;
+    width: 100vw;
+    margin: 80px 0;
     overflow-x: hidden;
   }
   #testimonials .container {
-    padding: 20px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     height: 100%;
+    width: 100vw;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+  #testimonials .container .quotes {
+    padding: 40px 10px;
+    margin: 0;
   }
 }
 
@@ -1548,6 +1667,9 @@ template {
 }
 
 #numbers .container {
+  width: 100%;
+  height: 100%;
+  padding-left: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1556,10 +1678,6 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  margin-left: 300px;
-  padding-left: 45px;
 }
 
 #numbers .container .number {
@@ -1627,7 +1745,8 @@ template {
 }
 
 #numbers .active-cont {
-  margin-left: 0px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 .active-numbers {
@@ -1676,7 +1795,6 @@ template {
 #news .container {
   width: 100%;
   height: 100%;
-  margin-left: 300px;
   padding-left: 45px;
 }
 
@@ -1692,7 +1810,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1703,14 +1820,13 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
 
 #news .container .center {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1756,7 +1872,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1767,7 +1882,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
   text-decoration: none;
@@ -1788,7 +1902,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 10px;
 }
@@ -1798,7 +1911,6 @@ template {
   color: #fff;
   background-color: #E3872D;
   font-weight: 600;
-  font-family: "Montserrat";
   padding: 12px 35px;
   border-radius: 3px;
   display: inline-block;
@@ -1806,44 +1918,53 @@ template {
 }
 
 #news .active-cont {
-  margin-left: 0px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 .active-news {
   width: 100vw;
   margin-left: 0px;
+  padding-left: 0px;
   padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {
   #news {
-    margin: 10px 15px;
-    width: 100%;
-    min-height: 100vh;
-    padding-top: 20px;
+    height: 100%;
+    width: 100vw;
+    padding-top: 60px;
+    margin: 10px;
+    overflow-x: hidden;
+  }
+  #news .container {
+    height: 100%;
+    width: 100vw;
+    padding: 0 10px;
+    margin: 0 auto;
   }
   #news .container .center .box {
     width: 100%;
-    margin: 10px;
+    margin: 20px;
   }
 }
 
 #contact {
   margin-left: 300px;
-  padding-bottom: 50px;
+  margin-bottom: 100px;
+  padding: 80px 0;
 }
 
 #contact .container {
   width: 100%;
   height: 100%;
-  margin-left: 300px;
   padding-left: 45px;
 }
 
 #contact .container .title {
   border-left: 6px solid #E3872D;
   padding-left: 15px;
-  margin-bottom: 100px;
+  margin-bottom: 40px;
 }
 
 #contact .container .title h1 {
@@ -1852,7 +1973,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1863,7 +1983,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1882,6 +2001,7 @@ template {
 
 #contact .container .center .leftSide {
   width: 30%;
+  padding-top: 30px;
 }
 
 #contact .container .center .leftSide .header {
@@ -1891,9 +2011,8 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
-  padding-bottom: 20px;
+  padding: 10px 0;
 }
 
 #contact .container .center .leftSide .row {
@@ -1906,12 +2025,11 @@ template {
 }
 
 #contact .container .center .leftSide .row .column div {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #000000;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1934,7 +2052,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #3a3737;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1946,7 +2063,6 @@ template {
   line-height: 1.8;
   letter-spacing: 0.5px;
   color: #3a3737;
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding-bottom: 0;
 }
@@ -1957,7 +2073,6 @@ template {
   color: #fff;
   background-color: #E3872D;
   font-weight: 300;
-  font-family: "Montserrat";
   padding: 12px 35px;
   border-radius: 3px;
   display: inline-block;
@@ -1971,23 +2086,30 @@ template {
 }
 
 #contact .active-cont {
-  margin-left: 0px;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 .active-contact {
   width: 100vw;
   margin-left: 0px;
+  padding-left: 0px;
   padding: 0 80px;
 }
 
 @media screen and (max-width: 768px) {
   #contact {
-    margin: 10px 15px;
-    max-width: 100vw;
-    width: 100%;
-    padding-top: 20px;
+    height: 100%;
+    width: 100vw;
+    padding: 80px 0;
     margin: 10px;
     overflow-x: hidden;
+  }
+  #contact .container {
+    height: 100%;
+    width: 100vw;
+    padding: 0 10px;
+    margin: 0 auto;
   }
   #contact .container .title {
     margin-bottom: 40px;
@@ -1997,6 +2119,11 @@ template {
   }
   #contact .container .center .leftSide .header {
     width: 90%;
+  }
+  #contact .container .center .leftSide .row {
+    padding-bottom: 20px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   #contact .container .center .rightSide {
     width: 100%;
@@ -2601,6 +2728,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -2614,7 +2742,12 @@ body {
 
 @media screen and (max-width: 768px) {
   html {
-    max-width: 100vw;
+    width: 100vw;
+  }
+  body {
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
   }
 }
 
@@ -2649,7 +2782,8 @@ footer p {
 }
 
 .active-footer {
-  width: 100%;
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
 }
 
 @media screen and (max-width: 768px) {

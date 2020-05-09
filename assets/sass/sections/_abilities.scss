@@ -1,86 +1,119 @@
-// -------------------------------------------------------------------
-// ----------------------- SECTION 3 - ABILITIES ---------------------
-// -------------------------------------------------------------------
+// ----------- SECTION 3 - ABILITIES -----------
 
 #abilities {
     min-width: 100vh;
     margin-left: 300px;
 
     .container {
-        height: 50%;
         width: 100%;
-        display: flex;
-        background-color: #F6F7FD;
-        align-content: center;
-        margin-left: 300px;
+        height: 100%;
+        padding-left: 45px;
 
+        .title {
+            border-left: 6px solid #E3872D;
+            padding-left: 15px;
+            margin-bottom: 50px;
 
-        .leftPart {
-            height: 100%;
-            width: 35%;
-            line-height: 1.8;
-            letter-spacing: 0.5px;
-            color: #000000;
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding-left: 30px;
-            font-weight: bolder;
-
-            h3 {
-                margin: 0;
-                padding: 0 20px;
-                font-size: 28px;
+            h1 {
+                font-size: 40px;
                 font-weight: 300;
-            }
-
-            p {
-                font-size: 12px;
-                font-weight: 300;
-                text-align: justify;
-            }
-        }
-
-        .activeLeftPart {
-            padding-left: 100px
-        }
-
-        .rightPart {
-            width: 65%;
-            margin: 0 auto;
-            padding: 0 40px;
-            align-content: center;
-
-            .text {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
                 line-height: 1.8;
                 letter-spacing: 0.5px;
                 color: #000000;
-                font-family: 'Montserrat', sans-serif;
-                margin: 7px 0;
+                margin: 0;
+                padding-bottom: 0;
+            }
 
-                div {
-                    font-size: 13px;
+            h3 {
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                margin: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        .content {
+            width: 75vw;
+            background-color: #F6F7FD;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 0;
+            padding: 0;
+
+            .leftPart {
+                height: 100%;
+                width: 35%;
+                line-height: 1.8;
+                letter-spacing: 0.5px;
+                color: #000000;
+                margin: 0;
+                padding-left: 30px;
+                font-weight: bolder;
+
+                h3 {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0 20px;
+                    font-size: 28px;
+                    font-weight: 300;
+                }
+
+                p {
+                    font-size: 12px;
+                    font-weight: 300;
+                    text-align: justify;
                 }
             }
 
-            .progress {
-                position: relative;
-                height: 5px;
-                margin: 13px 0;
-                background: #bdc3c7;
-                width: 100%;
+            // .activeLeftPart {
+            //     padding-left: 100px
+            // }
 
-                span {
-                    display: block;
-                    height: 100%;
-                    background-color: rgb(230, 126, 34);
+            .rightPart {
+                width: 65%;
+                margin: 0 auto;
+                padding: 0 40px;
+                align-content: center;
+
+                .text {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    line-height: 1.8;
+                    letter-spacing: 0.5px;
+                    color: #000000;
+                    margin: 7px 0;
+
+                    div {
+                        font-size: 13px;
+                    }
+                }
+
+                .progress {
                     position: relative;
-                    overflow: hidden;
+                    height: 5px;
+                    margin: 13px 0;
+                    background: #bdc3c7;
+                    width: 100%;
+
+                    span {
+                        display: block;
+                        height: 100%;
+                        background-color: rgb(230, 126, 34);
+                        position: relative;
+                        overflow: hidden;
+                    }
                 }
             }
         }
+    }
+
+    .active-cont {
+        transform: translateX(-300px);
     }
 
     button {
@@ -96,65 +129,74 @@
 }
 
 .active-abilities {
-    transform: translateX(-300px);
-    width: 100%;
+    width: 100vw;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding: 0 80px;
 }
 
-// -------- RESPONSIVE FOR 768px - 1500px (XIAOMI REDMI 7) -------
-// ---------------------------------------------------------------
 @media screen and (max-width: 768px) {
+
     #abilities {
-        margin: 0 15px;
         height: 100%;
-        width: 100%;
-        // padding: 80px 0;
+        width: 100vw;
+        padding-top: 20px;
         margin: 10px;
         overflow-x: hidden;
 
         .container {
-            display: block;
-            margin: 0;
+            width: 100%;
+            margin: 0 auto;
             padding: 0;
-            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
 
-            .leftPart {
-                display: block;
-                width: 100%;
-                padding: 0 15px;
-                margin: 0;
-                height: 30vh;
+            .title {
+                padding: 0 10px;
 
-
-                h3 {
-                    display: inline-block;
-                    margin: 0;
-                    padding: 0;
+                h1 {
+                    font-size: 25px;
                 }
-
-                p {}
             }
 
-            .activeLeftPart {}
-
-            .rightPart {
+            .content {
                 width: 100%;
-                padding: 10px;
-                margin: 0;
+                flex-direction: column;
+                padding: 20px 10px;
 
-                .text {
+                .leftPart {
+                    width: 100%;
+                    padding: 0;
+                    margin: 0;
 
-                    div {}
+                    h3 {
+                        font-size: 25px;
+                        width: 90vw;
+                        margin: 0;
+                        padding: 0;
+                    }
 
+                    p {
+                        width: 90vw;
+                        margin: 0;
+                        padding: 0;
+                    }
                 }
 
-                .line {
+                .rightPart {
+                    width: 100%;
+                    margin: 0;
+                    padding: 0;
 
-                    .lineInside {}
+                    .progress {
+                        max-width: 90vw;
+                        // padding-right: 20px;
+                        // margin-right: 20px;
+                        margin: 0;
+                        padding: 0
+                    }
                 }
             }
         }
     }
-
-
-
 }

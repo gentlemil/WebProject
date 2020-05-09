@@ -20,8 +20,11 @@ $(document).ready(function () {
         $("body").toggleClass("active-body");
         $("#navigation").toggleClass("main");
         $(".button").toggleClass("active-btn");
+
         $("#main-page").toggleClass("active-main");
+        $(".particles").toggleClass("active-cont");
         $(".container").toggleClass("active-cont");
+
         $("#about").toggleClass("active-about");
         $("#abilities").toggleClass("active-abilities");
         $(".leftPart").toggleClass("activeLeftPart");
