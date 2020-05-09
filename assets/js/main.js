@@ -17,16 +17,18 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $("button").click(function () {
+        $("body").toggleClass("active-body");
         $("#navigation").toggleClass("main");
         $(".button").toggleClass("active-btn");
-        $("#main-page").toggleClass("active");
+        $("#main-page").toggleClass("active-main");
+        $(".container").toggleClass("active-cont");
         $("#about").toggleClass("active-about");
         $("#abilities").toggleClass("active-abilities");
         $(".leftPart").toggleClass("activeLeftPart");
         $("#services").toggleClass("active-services");
         $("#portfolio").toggleClass("active-portfolio");
         $("#testimonials").toggleClass("active-testimonials");
-        $(".owl-carousel").toggleClass("active-testimonials-owl");
+        $(".quotes").toggleClass("active-quotes");
         $("#numbers").toggleClass("active-numbers");
         $("#news").toggleClass("active-news");
         $("#contact").toggleClass("active-contact");
@@ -188,26 +190,6 @@ $(".sub-tab li").click(function (e) {
 // ------------------------------------------------------------------
 // -------------- SECTION 7 - TESTIMONIALS --------------------------
 // ------------------------------------------------------------------
-
-$(document).ready(function () {
-    // $(".owl-carousel").owlCarousel();
-
-    var owl = $('.owl-carousel');
-    owl.owlCarousel({
-        items: 1,
-        loop: true,
-        margin: 10,
-        autoplay: true,
-        autoplayTimeout: 1000,
-        autoplayHoverPause: true
-    });
-    $('.play').on('click', function () {
-        owl.trigger('play.owl.autoplay', [1000])
-    })
-    $('.stop').on('click', function () {
-        owl.trigger('stop.owl.autoplay')
-    })
-});
 
 // --------------------------
 

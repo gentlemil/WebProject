@@ -5,9 +5,6 @@
 #abilities {
     min-width: 100vh;
     margin-left: 300px;
-    display: flex;
-    align-items: center;
-    padding: 80px 0;
 
     .container {
         height: 50%;
@@ -15,6 +12,7 @@
         display: flex;
         background-color: #F6F7FD;
         align-content: center;
+        margin-left: 300px;
 
 
         .leftPart {

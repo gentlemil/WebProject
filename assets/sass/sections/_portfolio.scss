@@ -8,12 +8,15 @@
 
     .container {
         width: 100%;
+        height: 100%;
+        margin-left: 300px;
+        padding-left: 45px;
 
         .title {
+            width: 100%;
             border-left: 6px solid #E3872D;
             padding-left: 15px;
             margin-bottom: 40px;
-            margin-left: 30px;
 
             h1 {
                 font-size: 40px;
@@ -39,7 +42,8 @@
         }
 
         .center {
-            min-height: 100vh;
+            height: 100%;
+            width: 100%;
 
             ul {
                 list-style: none;
@@ -109,11 +113,17 @@
             }
         }
     }
+
+    .active-cont {
+        // padding-left: 100px;
+        margin-left: 0px;
+    }
 }
 
 .active-portfolio {
-    transform: translateX(-300px);
-    width: 100%;
+    // transform: translateX(-300px);
+    width: 100vw;
+    margin-left: 0px;
     padding: 0 80px;
 }
 

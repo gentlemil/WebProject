@@ -3,15 +3,25 @@
 // -------------------------------------------------------------------
 #numbers {
     height: 25vh;
+    // margin-left: 300px;
+    // margin-bottom: 100px;
+    // padding: 100px 0;
+
     margin-left: 300px;
     margin-bottom: 100px;
+    padding-top: 80px;
 
     .container {
-        width: 95%;
-        padding: 0 80px;
+        // width: 95%;
+        // padding: 0 80px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        width: 100%;
+        height: 100%;
+        margin-left: 300px;
+        padding-left: 45px;
 
         .number {
             border-right: 0.5px solid #ccc8c8;
@@ -73,11 +83,21 @@
             border-right: none;
         }
     }
+
+    .active-cont {
+        // padding-left: 100px;
+        margin-left: 0px;
+    }
 }
 
 .active-numbers {
-    transform: translateX(-300px);
-    width: 100%;
+    // transform: translateX(-300px);
+    // width: 100%;
+    // padding: 0 80px;
+
+    // transform: translateX(-300px);
+    width: 100vw;
+    margin-left: 0px;
     padding: 0 80px;
 }
 

@@ -10,11 +10,13 @@
     .container {
         width: 100%;
         height: 100vh;
-        margin-left: 30px;
+        margin-left: 300px;
+        padding-left: 45px;
 
         .title {
             border-left: 6px solid #E3872D;
             padding-left: 15px;
+            // margin-left: 45px;
             margin-bottom: 40px;
 
             h1 {
