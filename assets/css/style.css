@@ -501,7 +501,6 @@ template {
 
 #respNavigation {
   max-width: 768px;
-  padding: 0 10px;
   background-color: #041230;
   overflow-x: hidden;
 }
@@ -548,9 +547,9 @@ template {
 #respNavigation .menuNew {
   z-index: 1000000;
   font-weight: bold;
-  font-size: 0.8em;
-  width: 100%;
-  background-color: #041230ce;
+  font-size: 1em;
+  width: 100vw;
+  background-color: #041230;
   position: absolute;
   text-align: center;
   font-size: 12px;
@@ -570,7 +569,6 @@ template {
 }
 
 #respNavigation .menuNew ul li a {
-  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   color: #E4E6E9;
   text-decoration: none;
@@ -582,7 +580,33 @@ template {
   text-decoration: none;
 }
 
-#respNavigation .menuNew ul li:hover {
+#respNavigation .menuNew ul li ol {
+  list-style: none;
+  padding: 0 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#respNavigation .menuNew ul li ol li {
+  display: block;
+  padding: 15px 0;
+  border-bottom: none;
+}
+
+#respNavigation .menuNew ul li ol li a {
+  text-decoration: none;
+  color: #E4E6E9;
+  text-decoration: none;
+  margin: 0px;
+}
+
+#respNavigation .menuNew ul li li:hover {
   display: block;
   background: #04123088;
   padding: 15px 0 15px 0;
@@ -664,19 +688,9 @@ template {
   padding: 0;
 }
 
-#main-page .particles .container .nameHolder h1 {
-  font-size: 40px;
-  font-weight: 300;
-  line-height: 1.8;
-  letter-spacing: 0.5px;
-  color: #E4E6E9;
-  margin: 0;
-  padding-bottom: 0;
-  color: #E3872D;
-}
-
 #main-page .particles .container .nameHolder h1 span {
   color: #E3872D;
+  letter-spacing: 0.5px;
 }
 
 #main-page .particles .container .nameHolder .textTyping {
