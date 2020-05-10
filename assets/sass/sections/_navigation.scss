@@ -36,9 +36,8 @@
             li {
 
                 a {
-                    font-family: 'Montserrat', sans-serif;
                     font-weight: 700;
-                    font-size: 14px;
+                    font-size: 16px;
                     text-decoration: none;
                     color: $mainFontColor;
                     position: relative;
@@ -55,7 +54,6 @@
                     bottom: -5px;
                     transition: 0.4s all;
                     transform: translateX(100%);
-                    // transform: translateY(-200%);
                 }
 
                 a:hover::after {
@@ -89,7 +87,7 @@
 
                 a {
                     color: $mainFontColor;
-                    font-size: 12px;
+                    font-size: 16px;
                 }
 
                 a:hover {
